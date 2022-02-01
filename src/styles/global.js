@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,13 +50,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body.dark {
-  --color-background: #181818;
-  --color-primary-texts: #919191;
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif !important;
+}
+body {
+	--main-background-color: #181818;
+	--main-text-color: #919191;
+	--main-border-color: #404040;
+	--main-icon-color: #BBBBBB;
   --color-body-texts: #ffffff;
   --color-link-texts: #E67E22;
 }
-
+body {
+	background-color: var(--main-background-color);
+}
 `
 
 export default GlobalStyles
