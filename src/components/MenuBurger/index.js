@@ -4,7 +4,7 @@ import * as S from './styled'
 
 const MenuBurger = () => {
   return (
-    <S.MenuBurgerWrapper name="Abrir menu">
+    <S.MenuBurgerWrapper aria-label="Abrir menu">
       <S.MenuBurgerIcon />
       {/* <S.CloseIcon /> */}
     </S.MenuBurgerWrapper>
