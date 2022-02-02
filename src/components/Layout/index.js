@@ -12,14 +12,18 @@ import * as S from './styled'
 
 import Header from '../Header'
 
+import { MenuContextProvider } from '../Menu'
+
 import GlobalStyles from '../../styles/global';
 
 const Layout = ({ children }) => {
   return (
     <S.LayoutWrapper>
-      <GlobalStyles />
-      <Header />
-      <S.LayoutMain>{children}</S.LayoutMain>
+      <MenuContextProvider>
+        <GlobalStyles />
+        <Header />
+        <S.LayoutMain>{children}</S.LayoutMain>
+      </MenuContextProvider>
     </S.LayoutWrapper>
   )
 }

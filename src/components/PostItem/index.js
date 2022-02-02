@@ -13,7 +13,9 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
         <S.PostItemTitle>{title}</S.PostItemTitle>
       </S.PostItemLink>
       <S.PostItemDescription>{description}</S.PostItemDescription>
-      {thumbnail ? <S.PostItemThumbnail fluid={thumbnail.childImageSharp.fluid} /> : <></>}
+      <S.PostItemLink to={slug} title={`Ir para o post ${title}`}>
+        {thumbnail ? <S.PostItemThumbnail fluid={thumbnail.childImageSharp.fluid} /> : <></>}
+      </S.PostItemLink>
     </S.PostItemWrapper>
   )
 }

@@ -3,14 +3,15 @@ import React from 'react';
 import * as S from './styled'
 
 import Profile from '../Profile'
-import MenuBurger from '../MenuBurger'
+import SideDrawer, { MenuBurger } from '../Menu'
 import { SearchIcon } from '../Search'
 
 const Header = () => (
   <S.HeaderWrapper>
     <Profile />
     <SearchIcon />
-    {/* <MenuBurger /> */}
+    <MenuBurger />
+    <SideDrawer />
   </S.HeaderWrapper>
 )
 
