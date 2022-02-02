@@ -41,8 +41,6 @@ export const MenuContextProvider = ({ children }) => {
 export const MenuBurger = () => {
   const context = useContext(MenuContext)
 
-  console.log(context)
-
   if (context.menuOpen) {
     return (
       <S.MenuBurgerWrapper onClick={context.closeMenu} aria-label="Fechar menu">
