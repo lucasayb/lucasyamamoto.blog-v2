@@ -8,7 +8,9 @@ export const PostItemWrapper = styled.section`
 export const PostItemTitle = styled.div`
   color: var(--secondary-text-color);
   font-size: 22px;
-  font-weight: 400;
+  @media screen and (min-width: 800px) {
+    font-size: 22px;
+  }
   line-height: 30px;
   margin: 10px 0;
   &:hover {
@@ -46,7 +48,5 @@ export const PostItemThumbnail = styled(Img)`
 `
 export const PostItemDescription = styled.p`
   color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 30px;
-  margin-bottom: 10px;
+  line-height: 26px;
 `

@@ -35,9 +35,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -52,7 +49,6 @@ table {
 }
 * {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif !important;
 }
 body {
 	--main-background-color: #181818;
@@ -64,6 +60,18 @@ body {
 }
 body {
 	background-color: var(--main-background-color);
+  font: 400 16px/1.5 'Roboto', sans-serif;
+  color: #bbbbbb;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
 }
 `
 
