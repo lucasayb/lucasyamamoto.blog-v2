@@ -4,6 +4,7 @@ import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Stats, Hits } from 'react-instantsearch-dom';
 import Hit from '../Hit'
 import AlgoliaIcon from "../../images/algolia.inline.svg"
+import getThemeColor from '../../utils/getThemeColor';
 
 const algolia = {
   appId: process.env.GATSBY_ALGOLIA_APP_ID,
@@ -13,7 +14,14 @@ const algolia = {
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey);
 
 export const SearchIcon = () => (
-  <S.SearchIconWrapper to="/search" title="Ir para a busca">
+  <S.SearchIconWrapper 
+    to="/search" 
+    title="Ir para a busca" 
+    duration={0.6}
+    cover
+    direction="top"
+    bg={getThemeColor()}
+  >
     <S.SearchIcon />
   </S.SearchIconWrapper>
 )

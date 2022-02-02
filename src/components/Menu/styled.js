@@ -7,6 +7,7 @@ import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
 export const MenuBurgerWrapper = styled.button`
   align-items: center;
   background-color: var(--primary-background-color);
+	transition: background-color 0.5s;
   cursor: pointer;
   display: flex;
   width: 38px;
@@ -27,6 +28,7 @@ export const CloseIcon = styled(CloseOutline)`
 export const SideDrawerWrapper = styled.aside`
   position: fixed;
   background: var(--primary-background-color);
+	transition: background-color 0.5s;
   width: 100%;
   height: 100vh;
   top: 60px;

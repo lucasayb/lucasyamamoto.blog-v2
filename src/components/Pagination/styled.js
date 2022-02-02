@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { ArrowLeft } from "@styled-icons/bootstrap/ArrowLeft"
 import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight"
@@ -11,7 +11,7 @@ export const PaginationWrapper = styled.section`
   padding: 15px;
 `
 
-export const PaginationLink = styled(Link)`
+export const PaginationLink = styled(AniLink)`
   align-items: center;
   display: flex;
   text-decoration: none;

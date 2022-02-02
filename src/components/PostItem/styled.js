@@ -7,6 +7,7 @@ export const PostItemWrapper = styled.section`
 `
 export const PostItemTitle = styled.div`
   color: var(--primary-text-color);
+  transition: color 0.5s;
   font-size: 1.375rem;
   @media screen and (min-width: 800px) {
     font-size: 1.375rem;

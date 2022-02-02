@@ -19,7 +19,9 @@ const BlogList = ({ data, ...props }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo 
+        title="Home"
+      />
       <PageTitle>Posts</PageTitle>
       {postList.map(({
         node: {

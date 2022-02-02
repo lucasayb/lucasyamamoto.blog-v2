@@ -86,6 +86,7 @@ body.light {
 }
 body {
 	background-color: var(--primary-background-color);
+	transition: background-color 0.5s;
   font: 400 18px/1.5 'Roboto', sans-serif;
   color: var(--primary-text-color);
   -webkit-text-size-adjust: 100%;

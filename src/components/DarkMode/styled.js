@@ -4,6 +4,7 @@ import { Lightbulb } from '@styled-icons/bootstrap/Lightbulb'
 export const DarkModeWrapper = styled.button`
   align-items: center;
   background-color: var(--primary-background-color);
+	transition: background-color 0.5s;
   border: none;
   cursor: pointer;
   display: flex;

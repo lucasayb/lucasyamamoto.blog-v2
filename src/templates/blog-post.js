@@ -12,7 +12,11 @@ const BlogPost = ({ data }) => {
   const { frontmatter, fields, html } = markdownRemark;
   return (
     <Layout>
-      <Seo title={frontmatter.title} />
+      <Seo 
+        title={frontmatter.title} 
+        description={frontmatter.description}
+        image={frontmatter.thumbnail?.childImageSharp?.fluid?.src}
+      />
       <S.PostWrapper>
         <S.PostTitle>{frontmatter.title}</S.PostTitle>
         <S.PostHeader>
