@@ -20,11 +20,22 @@ export const SearchIcon = styled(Search)`
   height: 18px;
 `
 
+export const SearchInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const SearchAlgoliaIcon = styled.div`
+  filter: grayscale(1);
+  opacity: 0.5;
+`
+
 export const SearchBoxWrapper = styled.section`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  height: 78px;
+  height: 120px;
   .ais-SearchBox,
   .ais-Stats {
     padding: 0 15px;

@@ -3,6 +3,7 @@ import * as S from './styled'
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Stats, Hits } from 'react-instantsearch-dom';
 import Hit from '../Hit'
+import AlgoliaIcon from "../../images/algolia.inline.svg"
 
 const algolia = {
   appId: process.env.GATSBY_ALGOLIA_APP_ID,
@@ -22,9 +23,12 @@ const Search = () => (
     <S.SearchBoxWrapper>
       {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
       <SearchBox autoFocus translations={{ placeholder: 'Pesquisar...' }} />
-      <Stats translations={{stats(nbHits, timeSpentMs) {
-        return `${nbHits} resultados encontrados em ${timeSpentMs} ms`
-      }}} />
+      <S.SearchInfo>
+        <Stats translations={{stats(nbHits, timeSpentMs) {
+          return `${nbHits} resultados encontrados em ${timeSpentMs} ms`
+        }}} />
+        <S.SearchAlgoliaIcon><AlgoliaIcon /></S.SearchAlgoliaIcon>
+      </S.SearchInfo>
     </S.SearchBoxWrapper>
     <Hits hitComponent={Hit} />
   </InstantSearch>
