@@ -13,7 +13,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -117,7 +116,8 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     'gatsby-redirect-from',
-    'gatsby-plugin-meta-redirect' // make sure this is always the last one
+    'gatsby-plugin-meta-redirect',
+    `gatsby-plugin-netlify-cms`, // make sure this is always the last one
   ],
   
 }

@@ -1,16 +1,48 @@
 backend:
-  name: test-repo
+  name: github
+  repo: lucasayb/lucasyamamoto.blog-v2
+  branch: main
+  site_domain: https://www.lucasyamamoto.com
 
-media_folder: static/assets
-public_folder: /assets
+publish_mode: editorial_workflow
+
+media_folder: "static/assets/images"
+public_folder: "/assets/images"
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Dicas", "Vídeos", "Desenvolvimento", "Vida", "DevOps"],
+        }
+      - {
+          label: "Color",
+          name: "color",
+          widget: "select",
+          options:
+            [
+              { label: "Dicas", value: "#1abc9c" },
+              { label: "Vídeos", value: "#3498db" },
+              { label: "DevOps", value: "#9b59b6" },
+              { label: "Desenvolvimento", value: "#e74c3c" },
+              { label: "Vida", value: "#6ab04c" },
+            ],
+        }
+      - { label: "Redirect from", name: "redirect_from", widget: "list" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
