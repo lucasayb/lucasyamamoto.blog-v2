@@ -1,5 +1,16 @@
 import styled from 'styled-components'
 
+export const SorryGifWrapper = styled.div`
+  text-align: center;
+  img {
+    max-width: 300px;
+  }
+`
+
+export const NotFoundWrapper = styled.section`
+  padding: 15px;
+`
+
 export const TitleNotFound = styled.h1`
   text-align: center;
   margin-top: 40px;
