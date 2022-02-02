@@ -10,7 +10,7 @@ const Header = () => (
   <S.HeaderWrapper>
     <Profile />
     <SearchIcon />
-    <MenuBurger />
+    {/* <MenuBurger /> */}
   </S.HeaderWrapper>
 )
 
