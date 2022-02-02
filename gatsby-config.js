@@ -11,6 +11,7 @@ module.exports = {
     siteUrl: `https://www.lucasyamamoto.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
