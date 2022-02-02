@@ -59,8 +59,8 @@ body {
 	--main-text-color: #919191;
 	--main-border-color: #404040;
 	--main-icon-color: #BBBBBB;
-  --color-body-texts: #ffffff;
-  --color-link-texts: #E67E22;
+  --secondary-text-color: #ffffff;
+  --main-link-color: #E67E22;
 }
 body {
 	background-color: var(--main-background-color);

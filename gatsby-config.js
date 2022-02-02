@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://www.lucasyamamoto.com/`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -16,6 +17,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
       },
     },
     `gatsby-transformer-sharp`,
