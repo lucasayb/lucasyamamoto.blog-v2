@@ -5,14 +5,18 @@ import * as S from './styled'
 import Profile from '../Profile'
 import SideDrawer, { MenuBurger } from '../Menu'
 import { SearchIcon } from '../Search'
+import DarkMode from '../DarkMode'
 
-const Header = () => (
-  <S.HeaderWrapper>
-    <Profile />
-    <SearchIcon />
-    <MenuBurger />
-    <SideDrawer />
-  </S.HeaderWrapper>
-)
+const Header = () => {
 
+  return (
+    <S.HeaderWrapper>
+      <Profile />
+      <DarkMode />
+      <SearchIcon />
+      <MenuBurger />
+      <SideDrawer />
+    </S.HeaderWrapper>
+  )
+}
 export default Header;

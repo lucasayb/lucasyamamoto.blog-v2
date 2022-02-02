@@ -5,6 +5,8 @@ import * as S from './styled'
 
 import { navLinks, socialLinks } from './content'
 
+import getThemeColor from '../../utils/getThemeColor';
+
 export const MenuContext = React.createContext({});
 
 export const MenuContextProvider = ({ children }) => {
@@ -68,10 +70,13 @@ const SideDrawer = () => {
       <S.SideDrawerNav>
         {navLinks.map((navLink, key) => (
           <S.SideDrawerNavLink 
+            cover
+            direction="left"
+            bg={getThemeColor()}
+            duration={0.6}
             key={key} 
             to={navLink.path} 
             activeClassName="active" 
-            onClick={context.closeMenu}
             title={navLink.name}
           >
             {navLink.name}

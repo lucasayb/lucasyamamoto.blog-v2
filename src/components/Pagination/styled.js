@@ -18,12 +18,12 @@ export const PaginationLink = styled(Link)`
 `
 
 export const ArrowLeftIcon = styled(ArrowLeft)`
-  color: var(--main-link-color);
+  color: var(--primary-link-color);
   width: 20px;
   margin-right: 15px;
 `
 export const ArrowRightIcon = styled(ArrowRight)`
-  color: var(--main-link-color);
+  color: var(--primary-link-color);
   width: 20px;
   margin-left: 15px;
 `

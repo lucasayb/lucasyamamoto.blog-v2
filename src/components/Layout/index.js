@@ -14,6 +14,8 @@ import Header from '../Header'
 
 import { MenuContextProvider } from '../Menu'
 
+import { TransitionPortal } from "gatsby-plugin-transition-link";
+
 import GlobalStyles from '../../styles/global';
 
 const Layout = ({ children }) => {
@@ -21,7 +23,9 @@ const Layout = ({ children }) => {
     <S.LayoutWrapper>
       <MenuContextProvider>
         <GlobalStyles />
-        <Header />
+        <TransitionPortal level="top">
+          <Header />
+        </TransitionPortal>
         <S.LayoutMain>{children}</S.LayoutMain>
       </MenuContextProvider>
     </S.LayoutWrapper>

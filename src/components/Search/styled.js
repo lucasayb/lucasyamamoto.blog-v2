@@ -4,7 +4,7 @@ import { Search } from '@styled-icons/boxicons-regular/Search'
 
 export const SearchIconWrapper = styled(Link)`
   align-items: center;
-  background-color: var(--main-background-color);
+  background-color: var(--primary-background-color);
   border: none;
   cursor: pointer;
   display: flex;
@@ -15,7 +15,7 @@ export const SearchIconWrapper = styled(Link)`
 `
 
 export const SearchIcon = styled(Search)`
-  color: var(--main-icon-color);
+  color: var(--primary-icon-color);
   width: 18px;
   height: 18px;
 `
@@ -47,21 +47,21 @@ export const SearchBoxWrapper = styled.section`
     font-weight: 100;
   }
   .ais-SearchBox-input {
-    background-color: var(--main-background-color);
+    background-color: var(--primary-background-color);
     border: none;
-    border-bottom: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
     font-size: 1.125rem;
     font-weight: 200;
-    color: var(--main-text-color);
+    color: var(--primary-text-color);
     padding: 5px 15px;
     width: 100%;
     margin-bottom: 10px;
     &::placeholder {
-      color: var(--main-text-color);
+      color: var(--primary-text-color);
     }
   }
   .ais-Stats-text {
-    color: var(--main-text-color);
+    color: var(--primary-text-color);
   }
   .ais-SearchBox-submit,
   .ais-SearchBox-reset, 

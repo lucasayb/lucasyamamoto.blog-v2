@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout";
 import Comments from "../components/Comments";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import * as S from '../components/Post/styled';
 
 const BlogPost = ({ data }) => {

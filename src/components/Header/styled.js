@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
   align-items: center;
-  background-color: var(--main-background-color);
-  border-bottom: 1px solid var(--main-border-color);
+  background-color: var(--primary-background-color);
+  border-bottom: 1px solid var(--primary-border-color);
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -12,5 +12,5 @@ export const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   height: 60px;
-  z-index: 100000000;
+  z-index: 1;
 `

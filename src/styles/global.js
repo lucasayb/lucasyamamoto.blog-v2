@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -55,29 +54,40 @@ ul, ol {
 * {
 	box-sizing: border-box;
 }
-body {
-	--main-background-color: #0a061c;
-	--main-text-color: #ffffff;
-	--main-border-color: #30336b;
-	--main-icon-color: #ffffff;
+body.dark {
+	--primary-background-color: #0a061c;
+	--primary-text-color: #ffffff;
+	--primary-border-color: #30336b;
+	--primary-icon-color: #ffffff;
   --secondary-text-color: #ffffff;
-  --main-link-color: #686de0;
-	--main-codeblock-border-color: #30336b;
-	--main-codeblock-background-color: #0e0826;
-	--main-table-nth-child-even-color: #140f2b;
-	--main-table-border-color: #1e173d;
-	--main-blockquote-border-color: #1e173d;
-	--main-blockquote-text-color: #bca7e5;
+  --primary-link-color: #686de0;
+	--primary-tag-text-color: #ffffff;
+	--primary-codeblock-border-color: #30336b;
+	--primary-codeblock-background-color: #0e0826;
+	--primary-table-nth-child-even-color: #140f2b;
+	--primary-table-border-color: #1e173d;
+	--primary-blockquote-border-color: #1e173d;
+	--primary-blockquote-text-color: #bca7e5;
 }
 body.light {
-	/* Coming soon */
-	--main-codeblock-border-color: #404040;
-	--main-codeblock-background-color: #212121;
+	--primary-background-color: #fff;
+	--primary-text-color: #000000;
+	--primary-border-color: #eee;
+	--primary-icon-color: #000000;
+  --secondary-text-color: #ffffff;
+  --primary-link-color: #686de0;
+	--primary-tag-text-color: #ffffff;
+	--primary-codeblock-border-color: #404040;
+	--primary-codeblock-background-color: #212121;
+	--primary-table-nth-child-even-color: #140f2b;
+	--primary-table-border-color: #1e173d;
+	--primary-blockquote-border-color: #1e173d;
+	--primary-blockquote-text-color: #bca7e5;
 }
 body {
-	background-color: var(--main-background-color);
+	background-color: var(--primary-background-color);
   font: 400 18px/1.5 'Roboto', sans-serif;
-  color: var(--main-text-color);
+  color: var(--primary-text-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -92,9 +102,9 @@ body {
   overflow-wrap: break-word;
 }
 a {
-  color: var(--main-link-color);
+  color: var(--primary-link-color);
   display: flex;
-  border-bottom: 1px dashed var(--main-link-color);
+  border-bottom: 1px dashed var(--primary-link-color);
 }
 `
 

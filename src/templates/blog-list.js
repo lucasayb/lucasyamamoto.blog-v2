@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import { PageTitle } from '../components/PageTitle/styled'
 import Layout from "../components/Layout";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import PostItem from '../components/PostItem';
 import Pagination from '../components/Pagination';
 
@@ -23,6 +23,7 @@ const BlogList = ({ data, ...props }) => {
       <PageTitle>Posts</PageTitle>
       {postList.map(({
         node: {
+          id,
           frontmatter: {
             category,
             title,
@@ -37,6 +38,7 @@ const BlogList = ({ data, ...props }) => {
         }
       }) => (
         <PostItem
+          key={id}
           date={date}
           title={title}
           thumbnail={thumbnail}
@@ -67,6 +69,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             category
             title

@@ -15,7 +15,7 @@ export const PostHeader = styled.section`
 export const PostTag = styled.section`
   align-items: center;
   background-color: ${(props) => props.color};
-  color: var(--secondary-text-color);
+  color: var(--primary-tag-text-color);
   display: flex;
   font-size: 1rem;
   text-align: center;
@@ -27,13 +27,13 @@ export const PostTag = styled.section`
 `
 
 export const PostDate = styled.time`
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   font-size: 0.875rem;
   font-weight: 100;
 `
 
 export const PostDescription = styled.h2`
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   font-style: italic !important;
   line-height: 1.625rem;
 `
@@ -45,7 +45,7 @@ export const PostThumbnail = styled(Img)`
 `
 
 export const PostTitle = styled.h1`
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   font-size: 2.625rem;
   @media screen and (min-width: 800px) {
     font-size: 2.625rem;
@@ -57,7 +57,7 @@ export const PostTitle = styled.h1`
 export const PostBody = styled.section`
   /** Set margin-bottom to maintain vertical rhythm */
   h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   h1 {
     font-size: 2.625rem;
   }
@@ -73,13 +73,13 @@ export const PostBody = styled.section`
     margin-bottom: 30px;
     width: 100%;
     text-align: left;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     border-collapse: collapse;
-    border: 1px solid var(--main-table-border-color);
+    border: 1px solid var(--primary-table-border-color);
   }
 
   table tr:nth-child(even) {
-    background-color: var(--main-table-nth-child-even-color);
+    background-color: var(--primary-table-nth-child-even-color);
   }
 
   table th,
@@ -88,12 +88,12 @@ export const PostBody = styled.section`
   }
 
   table th {
-    background-color: var(--main-table-nth-child-even-color);
-    border: 1px solid var(--main-table-border-color);
+    background-color: var(--primary-table-nth-child-even-color);
+    border: 1px solid var(--primary-table-border-color);
   }
 
   table td {
-    border: 1px solid var(--main-table-border-color);
+    border: 1px solid var(--primary-table-border-color);
   }
 
   h1,
@@ -142,8 +142,8 @@ export const PostBody = styled.section`
 
   /** Blockquotes */
   blockquote {
-    color: var(--main-blockquote-text-color);
-    border-left: 4px solid var(--main-blockquote-border-color);
+    color: var(--primary-blockquote-text-color);
+    border-left: 4px solid var(--primary-blockquote-border-color);
     padding-left: 15px;
     font-size: 1.125rem;
     font-style: italic;
@@ -164,9 +164,10 @@ export const PostBody = styled.section`
     font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono",
       "Liberation Mono", "Courier New", monospace;
     font-size: 0.9375em;
-    border: 1px solid var(--main-codeblock-border-color);
+    border: 1px solid var(--primary-codeblock-border-color);
+    color: var(--secondary-text-color);
     border-radius: 3px;
-    background-color: var(--main-codeblock-background-color);
+    background-color: var(--primary-codeblock-background-color);
   }
 
   code {

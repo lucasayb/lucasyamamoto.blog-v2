@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const LayoutWrapper = styled.div`
-  background-color: var(--main-background-color);
+  background-color: var(--primary-background-color);
   width: 100%;
   height: 100%;
   max-width: 800px;
@@ -10,7 +10,7 @@ export const LayoutWrapper = styled.div`
 `
 
 export const LayoutMain = styled.main`
-  background: var(--main-background-color);
+  background: var(--primary-background-color);
   margin-top: 75px;
   width: 100%;
 `
