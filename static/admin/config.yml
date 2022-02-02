@@ -2,7 +2,7 @@ backend:
   name: github
   repo: lucasayb/lucasyamamoto.blog-v2
   branch: main
-  site_domain: https://www.lucasyamamoto.com
+  site_domain: lucasyamamoto.netlify.com
 
 publish_mode: editorial_workflow
 
