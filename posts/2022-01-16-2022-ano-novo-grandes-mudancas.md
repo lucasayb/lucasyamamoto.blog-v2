@@ -1,12 +1,15 @@
 ---
-title: "2022: Ano novo, grandes mudanças"
-color: "#1ABC9C"
-date: 2022-01-16 21:51:02
+redirect_from:
+  - /vida/2022/01/16/2022-ano-novo-grandes-mudancas.html
+title:  "2022: Ano novo, grandes mudanças"
+date:   2022-01-16 15:43:01 -0300
 category: Vida
-categoryLink: "/vida"
-description: Desde 2020 que tenho oficialmente esse blog, mas já alguns anos havia feitos artigos diversos relacionados
+thumbnail: /assets/images/2022-01-16-2022-ano-novo-grandes-mudancas/2022.jpg
+description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
+color: "#6ab04c"
 ---
-Desde 2020 que tenho oficialmente esse blog, mas já alguns anos havia feitos artigos diversos relacionados a tecnologia, e quando lancei esse local com Jekyll, postei-os aqui e hoje tenho um espaço, uma pequena porção da internet para trazer pensamentos e ideias que possam ser ridículas, mas que consigam transmitir um pouco de conhecimento para aqueles que ainda estão tentando compreender o que é programação.
+
+Desde 2020 que tenho oficialmente esse blog, mas já alguns anos havia feito artigos diversos relacionados a tecnologia, e quando lancei esse local com Jekyll, postei-os aqui e hoje tenho um espaço, uma pequena porção da internet para trazer pensamentos e ideias que possam ser ridículas, mas que consigam transmitir um pouco de conhecimento para aqueles que ainda estão tentando compreender o que é programação.
 
 Sempre gostei de escrever, mas sempre tive receio de escrever publicamente relacionado a tópicos que possam causar algum tipo de desentendimento quando na verdade minha intenção é exatamente o oposto. Como conversei com meu amigo Samurai há alguns dias, concluímos que pensamos excessivamente antes de tomar a atitude e simplesmente fazer, o que apesar de ser um verdadeiro clichê, é uma realidade. Pensar excessivamente nas possibilidades que podem ocorrer, nos prós e nos contras, no bom e no péssimo resultado, etc, faz com que ao mesmo tempo que evitamos ter resultados indesejados, deixemos de inovar, errar e consequentemente aprender.
 
@@ -27,10 +30,12 @@ Além disso, quero fazer algumas alterações no blog. A princípio havia pensad
 - A possibilidade de segregar conteúdos em diferentes coleções (cursos, posts, vídeos, séries, etc)
 - A possibilidade de programar posts
 - Poder criar posts como rascunhos
-- Ter um editor WYSIWYG que me permita fazer uploads de imagens e vídeos sem precisar subí-las no repositório primeiro e depois referenciá-las via markdown
+- Ter um editor WYSIWYG que me permita fazer uploads de imagens e vídeos sem precisar subi-las no repositório primeiro e depois referenciá-las via markdown
 
 Entenda, adoro escrever em markdown, e ainda mais com o Notion, o app de anotações que uso para fazer meus rascunhos de posts, onde consigo escrever em markdown livremente, minha linha de pensamento flui ainda melhor, mas às vezes eu preciso ser rápido e posso perder minha linha de raciocínio simplesmente por ser difícil postar conteúdo em algum determinado dia ou hora, por isso quero fazer essa mudança.
 
 Fora que quero mudar o design do blog. Sair do Minima padrão do Jekyll e desenvolver algo próprio. Meu amigo Bruno Dup havia feito um design super clean para o blog e nunca tive a oportunidade de tirá-lo do papel (ou do Figma rsrs), mas esse ano quero fazer diferente. Quero mudar isso e tornar esse layout em realidade.
 
 Essas são algumas das mudanças que quero ter aqui no blog e no conteúdo dele. Em breve trago mais novidades.
+
+
