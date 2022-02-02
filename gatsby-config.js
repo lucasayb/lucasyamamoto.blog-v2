@@ -94,7 +94,7 @@ module.exports = {
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // for all queries
         queries,
         chunkSize: 10000, // default: 1000
-        enablePartialUpdates: false, // default: false
+        enablePartialUpdates: true, // default: false
       },
     },
     {
