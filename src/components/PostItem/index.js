@@ -9,7 +9,7 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
         <S.PostItemDate>{date}</S.PostItemDate>
         <S.PostItemTag color={color}>{category}</S.PostItemTag>
       </S.PostItemInfo>
-      <S.PostItemLink to={slug}>
+      <S.PostItemLink to={slug} title={`Ir para o post ${title}`}>
         <S.PostItemTitle>{title}</S.PostItemTitle>
       </S.PostItemLink>
       <S.PostItemDescription>{description}</S.PostItemDescription>

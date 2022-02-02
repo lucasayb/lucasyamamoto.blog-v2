@@ -12,7 +12,7 @@ const algolia = {
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey);
 
 export const SearchIcon = () => (
-  <S.SearchIconWrapper to="/search">
+  <S.SearchIconWrapper to="/search" title="Ir para a busca">
     <S.SearchIcon />
   </S.SearchIconWrapper>
 )
