@@ -1,13 +1,18 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Seo from "../components/seo"
+
+import { Link } from 'gatsby'
+
+import * as S from '../components/NotFound/styled'
 
 const NotFoundPage = () => (
   <Layout>
     <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <S.TitleNotFound>404</S.TitleNotFound>
+    <S.SubTitleNotFound>Página não encontrada :(</S.SubTitleNotFound>
+    <S.TextNotFound>A página que você buscou não pôde ser encontrada. Utilize minha excelente busca pra encontrar o que você desejada clicando <Link to="/search">aqui</Link></S.TextNotFound>
   </Layout>
 )
 

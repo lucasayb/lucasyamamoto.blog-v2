@@ -36,7 +36,6 @@ exports.createPages = ({ graphql, actions }) => {
             description
             date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
             color
-            categoryLink
           }
           fields {
             slug

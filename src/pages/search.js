@@ -2,14 +2,12 @@ import React from 'react'
 
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
-import { Link } from 'gatsby'
+import Search from "../components/Search"
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="About" />
-    <ul>
-      <li><Link to="/about">About</Link></li>
-    </ul>
+    <Seo title="Search" />
+    <Search />
   </Layout>
 )
 

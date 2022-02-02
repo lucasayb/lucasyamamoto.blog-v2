@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+const queries = require('./src/utils/algoliaQueries')
+
 module.exports = {
   siteMetadata: {
     title: `Lucas Yamamoto`,
@@ -11,6 +15,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `lucas-yamamoto`
+      }
+    },
     // Needs to be first to work properly with remark
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,7 +50,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              name: "uploads"
+              name: "uploads",
+              staticFolderName: 'static',
+              // [Optional] Include the following fields, use dot notation for nested fields
+              // All fields are included by default
+              include: ['thumbnail'],
+              // [Optional] Exclude the following fields, use dot notation for nested fields
+              // No fields are excluded by default
+              exclude: ['redirect_from'],
             }
           },
           {
@@ -69,8 +86,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-algolia-search`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: false, // default: false
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    'gatsby-redirect-from',
+    'gatsby-plugin-meta-redirect' // make sure this is always the last one
   ],
 }

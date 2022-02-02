@@ -7,11 +7,11 @@ export const PostItemWrapper = styled.section`
 `
 export const PostItemTitle = styled.div`
   color: var(--secondary-text-color);
-  font-size: 22px;
+  font-size: 1.375rem;
   @media screen and (min-width: 800px) {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
-  line-height: 30px;
+  line-height: 1.875rem;
   margin: 10px 0;
   &:hover {
     color: var(--main-link-color);
@@ -20,9 +20,10 @@ export const PostItemTitle = styled.div`
 export const PostItemTag = styled(Link)`
   align-items: center;
   background-color: ${(props) => props.color};
+  border-bottom: none;
   color: var(--secondary-text-color);
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   justify-content: center;
   height: 25px; 
@@ -32,7 +33,7 @@ export const PostItemTag = styled(Link)`
 `
 export const PostItemDate = styled.time`
   color: var(--secondary-text-color);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 100;
 `
 export const PostItemInfo = styled.div`
@@ -41,12 +42,15 @@ export const PostItemInfo = styled.div`
   justify-content: space-between;
 `
 export const PostItemLink = styled(Link)`
+  border-bottom: none;
   text-decoration: none;
 `
 export const PostItemThumbnail = styled(Img)`
+  margin-top: 10px;
   width: 100%;
 `
 export const PostItemDescription = styled.p`
   color: var(--secondary-text-color);
-  line-height: 26px;
+  font-style: italic !important;
+  line-height: 1.625rem;
 `

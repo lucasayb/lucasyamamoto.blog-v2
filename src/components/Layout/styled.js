@@ -9,6 +9,6 @@ export const LayoutWrapper = styled.div`
 `
 
 export const LayoutMain = styled.main`
-  background: #181818;
+  background: var(--main-background-color);
   width: 100%;
 `

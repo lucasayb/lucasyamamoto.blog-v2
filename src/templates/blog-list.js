@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 
-import Layout from "../components/layout";
+import { PageTitle } from '../components/PageTitle/styled'
+import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import PostItem from '../components/PostItem';
 import Pagination from '../components/Pagination';
@@ -19,15 +20,16 @@ const BlogList = ({ data, ...props }) => {
   return (
     <Layout>
       <Seo title="Home" />
+      <PageTitle>Posts</PageTitle>
       {postList.map(({
         node: {
           frontmatter: {
             category,
             title,
+            thumbnail,
             description,
             date,
             color,
-            categoryLink
           },
           fields: {
             slug
@@ -37,20 +39,20 @@ const BlogList = ({ data, ...props }) => {
         <PostItem
           date={date}
           title={title}
+          thumbnail={thumbnail}
           category={category}
-          categoryLink={categoryLink}
           color={color}
           slug={slug}
           description={description}
         />
       ))}
-      <Pagination 
-        isFirst={isFirst} 
-        isLast={isLast} 
-        currentPage={currentPage} 
-        numPages={numPages} 
-        prevPage={prevPage} 
-        nextPage={nextPage} 
+      <Pagination
+        isFirst={isFirst}
+        isLast={isLast}
+        currentPage={currentPage}
+        numPages={numPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
       />
     </Layout>
   )
@@ -71,7 +73,13 @@ export const query = graphql`
             description
             date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
             color
-            categoryLink
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug

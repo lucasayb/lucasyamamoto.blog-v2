@@ -8,6 +8,7 @@ export const ProfileWrapper = styled.section`
 
 export const ProfileLink = styled(Link)`
   align-items: center;
+  border-bottom: none;
   display: flex;
   text-decoration: none;
 `
@@ -25,14 +26,14 @@ export const ProfileInfo = styled.section`
 
 export const ProfileAuthor = styled.h1`
   color: var(--main-text-color);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 100 !important;
   text-decoration: none;
 `
 
 export const ProfilePosition = styled.h2`
   color: var(--main-text-color);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500 !important;
   text-decoration: none;
 `

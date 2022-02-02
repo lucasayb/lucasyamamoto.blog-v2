@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Img from "gatsby-image"
 
 export const PostWrapper = styled.section`
   padding: 15px;
@@ -16,7 +17,7 @@ export const PostTag = styled.section`
   background-color: ${(props) => props.color};
   color: var(--secondary-text-color);
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   justify-content: center;
   height: 25px; 
@@ -27,8 +28,20 @@ export const PostTag = styled.section`
 
 export const PostDate = styled.time`
   color: var(--secondary-text-color);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 100;
+`
+
+export const PostDescription = styled.h2`
+  color: var(--secondary-text-color);
+  font-style: italic !important;
+  line-height: 1.625rem;
+`
+
+export const PostThumbnail = styled(Img)`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 `
 
 export const PostTitle = styled.h1`
@@ -38,7 +51,6 @@ export const PostTitle = styled.h1`
     font-size: 2.625rem;
   }
   font-weight: 400;
-  line-height: 30px;
   margin: 10px 0;
 `
 
@@ -61,13 +73,13 @@ export const PostBody = styled.section`
     margin-bottom: 30px;
     width: 100%;
     text-align: left;
-    color: #bbbbbb;
+    color: var(--secondary-text-color);
     border-collapse: collapse;
-    border: 1px solid #404040;
+    border: 1px solid var(--main-table-border-color);
   }
 
   table tr:nth-child(even) {
-    background-color: #222222;
+    background-color: var(--main-table-nth-child-even-color);
   }
 
   table th,
@@ -76,24 +88,24 @@ export const PostBody = styled.section`
   }
 
   table th {
-    background-color: #323232;
-    border: 1px solid #4e4e4e;
+    background-color: var(--main-table-nth-child-even-color);
+    border: 1px solid var(--main-table-border-color);
   }
 
   table td {
-    border: 1px solid #404040;
+    border: 1px solid var(--main-table-border-color);
   }
 
   h1,
   h2,
   h3 {
-    margin-top: 60px;
+    margin-top: 30px;
   }
 
   h4,
   h5,
   h6 {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   h2 {
@@ -130,8 +142,8 @@ export const PostBody = styled.section`
 
   /** Blockquotes */
   blockquote {
-    color: #bca7e5;
-    border-left: 4px solid #404040;
+    color: var(--main-blockquote-text-color);
+    border-left: 4px solid var(--main-blockquote-border-color);
     padding-left: 15px;
     font-size: 1.125rem;
     font-style: italic;
@@ -152,9 +164,9 @@ export const PostBody = styled.section`
     font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono",
       "Liberation Mono", "Courier New", monospace;
     font-size: 0.9375em;
-    border: 1px solid #404040;
+    border: 1px solid var(--main-codeblock-border-color);
     border-radius: 3px;
-    background-color: #212121;
+    background-color: var(--main-codeblock-background-color);
   }
 
   code {
@@ -190,6 +202,13 @@ export const PostBody = styled.section`
     margin-bottom: 0;
   }
   p {
-    line-height: 26px;
+    line-height: 2rem;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  iframe {
+    margin: 10px 0;
   }
 `

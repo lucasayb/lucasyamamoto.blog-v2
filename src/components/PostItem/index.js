@@ -2,22 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import * as S from './styled'
 
-const PostItem = ({ slug, color, date, category, categoryLink, title, description }) => (
-  <S.PostItemWrapper>
-    <S.PostItemInfo>
-      <S.PostItemDate>{date}</S.PostItemDate>
-      <S.PostItemTag to={categoryLink} color={color}>{category}</S.PostItemTag>
-    </S.PostItemInfo>
-    <S.PostItemLink to={slug}>
-      <S.PostItemTitle>{title}</S.PostItemTitle>
-    </S.PostItemLink>
-    <S.PostItemDescription>{description}</S.PostItemDescription>
-  </S.PostItemWrapper>
-)
-
+const PostItem = ({ slug, thumbnail, color, date, category, title, description }) => {
+  return (
+    <S.PostItemWrapper>
+      <S.PostItemInfo>
+        <S.PostItemDate>{date}</S.PostItemDate>
+        <S.PostItemTag color={color}>{category}</S.PostItemTag>
+      </S.PostItemInfo>
+      <S.PostItemLink to={slug}>
+        <S.PostItemTitle>{title}</S.PostItemTitle>
+      </S.PostItemLink>
+      <S.PostItemDescription>{description}</S.PostItemDescription>
+      {thumbnail ? <S.PostItemThumbnail fluid={thumbnail.childImageSharp.fluid} /> : <></>}
+    </S.PostItemWrapper>
+  )
+}
 PostItem.propTypes = {
+  thumbnail: PropTypes.string,
+  date: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  categoryLink: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
