@@ -11,8 +11,8 @@ export const LayoutWrapper = styled.div`
 `
 
 export const LayoutMain = styled.main`
-  background: var(--primary-background-color);
-	transition: background 0.5s;
+  background-color: var(--primary-background-color);
+	transition: background-color 0.5s;
   margin-top: 75px;
   width: 100%;
 `
