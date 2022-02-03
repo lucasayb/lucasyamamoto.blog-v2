@@ -4,7 +4,7 @@ redirect_from:
 title: "Deploy de app em Node com Docker e Elastic Beanstalk"
 date: 2020-05-23 15:53:42 -0300
 category: DevOps
-thumbnail: /assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/46600198075_800187a13b_b.jpg
+thumbnail: /assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-thumbnail.jpg
 description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
 color: "#9b59b6"
 ---
@@ -30,12 +30,12 @@ Além da migração de Digital Ocean para AWS, também fizemos a mudança de Git
 
 No GitHub, crie um repositório com as informações exigidas:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_16.24.42.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_16.24.42.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_16.24.42.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-16.24.42.png)
 
 
 Com o repositório criado, vamos colocar nossa aplicação simples nele para que possamos utilizar em nosso processo. Para facilitar, deixei o repositório deste app público no GitHub. Você pode acessá-lo aqui: [https://github.com/lucasayb/aplicacao-node-simples](https://github.com/lucasayb/aplicacao-node-simples)
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_16.30.31.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_16.30.31.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_16.30.31.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-16.30.31.png)
 
 Basicamente essa aplicação é simples. O único objetivo dela é mostrar "Hello World" na tela.
 
@@ -127,7 +127,7 @@ Server running at port 3000
 
 Acessando [http://localhost:3000/](http://localhost:3000/), veremos nossa aplicação rodando em nossa máquina :) 
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.03.29.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.03.29.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.03.29.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.03.29.png)
 
 Salve, e suba no GitHub.
 
@@ -135,13 +135,13 @@ Salve, e suba no GitHub.
 
 Acessando o Elastic Container Registry, crie um repositório para que possamos armazenar nossas imagens. Faremos isso para que possamos buscá-la no Elastic Beanstalk:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.06.14.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.06.14.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.06.14.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.06.14.png)
 
 Basta preencher o nome do repositório e clicar em **Create repository**.
 
 Teremos então nossa imagem criada:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.09.07.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.09.07.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.09.07.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.09.07.png)
 
 Guarde a informação da URI para que possamos utilizá-la mais tarde.
 
@@ -151,39 +151,39 @@ Acesse o Elastic Beanstalk e crie um aplicativo novo.
 
 Coloque o **Nome do aplicativo**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.13.00.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.13.00.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.13.00.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.13.00.png)
 
 Insira as tags do aplicativo (opcional):
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.14.38.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.14.38.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.14.38.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.14.38.png)
 
 Selecione a **Plataforma** que iremos utilizar. No caso, **Docker**. E a **Ramificação da plataforma** eu costumo selecionar **Multi-container Docker**. Dessa forma, podemos adicionar novos containeres dentro do mesmo ambiente:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.16.39.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.16.39.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.16.39.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.16.39.png)
 
 Em seguida, em **Código do aplicativo**, podemos deixar **Aplicativo de exemplo** selecionado, visto que este será o aplicativo padrão que iniciará com nossa aplicação. Ao invés de clicar em **Criar aplicativo** diretamente, clique em **Configurar mais opções** para personalizar como nosso ambiente será criado. Lembrando que este passo é importante pois algumas modificações não podem ser feitos quando nosso ambiente já estiver rodando:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.18.55.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.18.55.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.18.55.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.18.55.png)
 
 Em **Predefinições de configuração**, selecione **Configuração personalizada**. Isso nos permitirá configurar o **Load balancer** caso queiramos e configurar o **SSL** para nosso domínio (Isso é algo que deixarei para um próximo tutorial):
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.22.09.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.22.09.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.22.09.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.22.09.png)
 
 No card de **Capacidade**, clique em **Editar**. Nesta nova tela, apenas edite as instâncias de **Máx** para **1** e clique em **Salvar**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.24.45.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.24.45.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.24.45.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.24.45.png)
 
 Como tudo está configurado conforme desejamos, clique em **Criar aplicativo**. Uma nova tela se abrirá e alguns minutos levarão até que nosso aplicativo esteja rodando:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.27.07.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.27.07.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.27.07.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.27.07.png)
 
 Aguarde estes minutos (algo em torno de 10 minutos) e veja a aplicação rodando na URL fornecida pelo AWS, abaixo do nome do ambiente:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.43.39.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.43.39.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.43.39.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.43.39.png)
 
 Pronto! Seu ambiente foi criado! Provavelmente você terá o seguinte resultado:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.44.08.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.44.08.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.44.08.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.44.08.png)
 
 ## 5. Criando o `buildspec`
 
@@ -299,31 +299,31 @@ Agora, para colocarmos nossa aplicação no ar, iremos criar um novo pipeline. U
 
 Insira o nome de seu pipeline. Para que nosso pipeline tenha acesso aos serviços necessários para o deploy, ele criará automaticamente uma função de serviço. Iremos precisar alterar esta função de serviço mais tarde. Em seguida, clique em **Próximo**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.47.08.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.47.08.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.47.08.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.47.08.png)
 
 Aqui teremos as opções de provedor de origem, ou seja, de onde nosso código irá ser extraído para realizar esse processo. Como criamos um repositório no GitHub mais cedo, selecione **GitHub** em **Provedor de origem**. Clique em **Conectar ao GitHub** , e assim que você se logar no GitHub, selecione o repositório desejado e branch que irá disparar esse pipeline. Basicamente, toda vez que um push for disparado em nossa branch, no meu caso `master`, o processo do pipeline irá se iniciar. Em seguida, clique em **Próximo**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.53.18.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.53.18.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.53.18.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.53.18.png)
 
 Na etapa de compilação, selecione o **AWS CodeBuild** como provedor de compilação. Em seguida, clique em **Criar projeto**. Uma nova aba irá se abrir. Nessa aba, na seção de **Configuração do projeto**, insira o **Nome do projeto**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.55.15.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_17.55.15.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_17.55.15.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-17.55.15.png)
 
 Na seção de **Ambiente**, mantenha selecionado **Imagem gerenciada** para a **Imagem de ambiente:**
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.02.19.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.02.19.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.02.19.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.02.19.png)
 
 Coloque o **Sistema operacional** como **Ubuntu. Tempo(s) de execução** selecionaremos **Standard**. **Imagem** selecionaremos **aws/codebuild/standard:1.0**. **Versão da imagem**, selecionaremos **Usar sempre a imagem mais recente para esta versão do tempo de execução** e em **Tipo de ambiente** manteremos selecionado **Linux**. Habilite a opção de **Privilegiado** pois nosso pipeline irá gerar uma imagem. Perceba também que esse build irá criar uma nova função de serviço. Guarde-a também pois iremos precisar modificá-la mais tarde:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.03.16.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.03.16.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.03.16.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.03.16.png)
 
 Na seção de **Buildspec**, manteremos selecionada a opção de **Usar um arquivo buildspec**. Este é o arquivo que criamos anteriormente.
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.04.48.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.04.48.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.04.48.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.04.48.png)
 
 Na seção de **Logs**, manteremos as configurações selecionadas e para finalizar, clicaremos em **Continuar para CodePipeline**.
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.26.45.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.26.45.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.26.45.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.26.45.png)
 
 De volta no passo de build do CodePipeline, na seção **Variáveis de ambiente**, insira as seguintes variáveis:
 
@@ -334,19 +334,19 @@ De volta no passo de build do CodePipeline, na seção **Variáveis de ambiente*
 
 Você deve ter algo conforme o seguinte:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.33.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.33.35.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.33.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.33.35.png)
 
 Clique em **Próximo** e prossiga.
 
 Este é o passo de **Implantação**. É nele que enviaremos nossas informações da nossa aplicação para o Elastic Beanstalk. Em **Provedor de implantação**, selecione **AWS Elastic Beanstalk**, **Nome do aplicativo** selecione o aplicativo criado no EBS e em **Nome do ambiente**, selecione o ambiente criado no EBS, juntamente com nosso aplicativo:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.36.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.36.35.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.36.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.36.35.png)
 
 Revise suas informações, e caso tudo esteja correto, clique em **Criar pipeline**.
 
 Logo em seguida, seu pipeline já será executado. Provavelmente o passo de **Build** irá falhar.
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.40.30.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.40.30.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.40.30.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.40.30.png)
 
 Visualizando os detalhes, poderemos ver o seguinte erro:
 
@@ -356,26 +356,26 @@ An error occurred (AccessDeniedException) when calling the GetAuthorizationToken
 
 Significa que o o CodeBuild não possui autorização para subir nossa imagem ao Elastic Container Registry. Para corrigir isso, vamos alterar as funções de serviço, criadas anteriormente pelo CodePipeline e pelo CodeBuild, para que eles possam ter as permissões necessárias no processo. Acesse o AWS IAM. Na barra lateral, clique em **Funções** e busque pela primeira função criada no processo do CodeBuild, no meu caso, `codebuild-aplicacao-node-simples-service-role`: 
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.44.58.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.44.58.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.44.58.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.44.58.png)
 
 Clique na função, e em seguida, clique em **Anexar políticas**:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.45.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.45.35.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.45.35.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.45.35.png)
 
 Na tela seguinte, busque por Elastic Container Registry e selecione a política **AmazonEC2ContainerRegistryPowerUser**. Basicamente, essa política é responsável por escrever e ler imagens no Elastic Container Registry, porém ela não poderá deletar nenhuma imagem. Clique em **Anexar política**: Faça o mesmo para a função criada pelo Code Pipeline, no meu caso, `AWSCodePipelineServiceRole-us-east-1-aplicacao-node-simples`:
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.46.19.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.46.19.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.46.19.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.46.19.png)
 
 Altere também a função `aws-elasticbeanstalk-ec2-role` para que o Elastic Beanstalk possa ter acesso ao Elastic Container Registry. Isso deverá ser feito apenas uma vez.
 
 Feito isso, retorne ao Code Pipeline, selecione seu pipeline criado e clique em **Lançar alteração**. Basicamente, ele irá executar o pipeline baseado no último commit do seu repositório.
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.50.21.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_18.50.21.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_18.50.21.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-18.50.21.png)
 
 Caso tudo tenha sido feito corretamente, seu pipeline deve ser executado agora sem problemas!
 
 Acesse sua aplicação e *voilà*! 
 
-![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_19.02.37.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk/Screen_Shot_2020-05-23_at_19.02.37.png)
+![Deploy de app em Node com Docker e Elastic Beanstalk/Screen_Shot_2020-05-23_at_19.02.37.png](/assets/images/2020-05-23-deploy-de-app-em-node-com-docker-e-elastic-beanstalk-19.02.37.png)
 
 > Importante ressaltar que todo este processo está utilizando recursos do AWS. Isso gera custos. Caso sua intenção seja apenas para aprendizado, não esqueça de deletar os recursos utilizados, se não cobranças indesejadas serão emitidas!

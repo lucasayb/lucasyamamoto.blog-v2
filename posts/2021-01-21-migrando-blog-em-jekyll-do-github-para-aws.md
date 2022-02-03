@@ -5,7 +5,7 @@ redirect_from:
 title: "Migrando blog em Jekyll do GitHub para AWS"
 date: 2021-01-21 15:53:42 -0300
 category: DevOps
-thumbnail: /assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/jekyll-og.jpg
+thumbnail: /assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-thumbnail.jpg
 description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
 color: "#9b59b6"
 ---
@@ -24,31 +24,31 @@ Para que possamos hospedar o blog, precisamos utilizar o S3, e com isso, necessi
 
 No console da Amazon, acesse S3 e clique em "**Criar bucket**"
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.53.34.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.53.34.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.53.34.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.53.34.png)
 
 Nesta seção, preencha as informações do seu novo bucket
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.53.59.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.53.59.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.53.59.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.53.59.png)
 
 No nome do bucket, vou colocar "lucasyamamoto.com", visto que este nome deve ser único no S3 inteiro. E vou mantê-lo em us-east-1, visto que é a região mais barata.
 
 Durante a criação do bucket, devemos desativar a opção "Bloquear acesso público", visto que queremos que todos sejam capazes de acessar nosso blog. E também, por questões de segurança, a AWS exige que você marque a opção "Desativar o bloqueio de todo o acesso público pode fazer com que este bucket e os objetos dentro dele se tornem públicos"
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.54.34.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.54.34.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.54.34.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.54.34.png)
 
 Para fazer o controle dos recursos, vou adicionar uma tag também
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.55.45.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.55.45.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.55.45.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.55.45.png)
 
 Depois é só clicar em "Criar bucket".
 
 Em seguida, com o bucket criado, acesse o bucket e acesse a aba de "Propriedades", na qual você deverá buscar o painel "Hospedagem de site estático" e clicar em "Editar" nele.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.57.31.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_20.57.31.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.57.31.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-20.57.31.png)
 
 Nesta nova página aberta, ative a hospedagem de sites estáticos e preencha a opção "Documento de índice" com "index.html" e "Documento de erro" com "404.html", sendo que essas são páginas que constarão na versão final do build gerado pelo Jekyll
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.13.03.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.13.03.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.13.03.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.13.03.png)
 
 Em seguida clique em "Salvar alterações".
 
@@ -75,7 +75,7 @@ Você deve colocar o seguinte conteúdo nesta página:
 }
 ```
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.01.18.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.01.18.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.01.18.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.01.18.png)
 
 Basicamente estamos abrindo nosso bucket para leitura pública, ou seja, todos poderão ver os dados estáticos desse bucket, visto que é onde estarão os dados estáticos do nosso site Jekyll.
 
@@ -87,25 +87,25 @@ Uma das vantagens que não pretendo perder nessa migração é o fato de um push
 
 Acessando o CodePipeline, podemos começar a criação de um novo Pipeline.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.24.44.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.24.44.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.24.44.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.24.44.png)
 
 Ao clicar em "Criar pipeline", devemos dar um nome a ele. Podemos manter as opções selecionadas por padrão e clicar em "Próximo".
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.25.04.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.25.04.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.25.04.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.25.04.png)
 
 Na primeira seção do nosso pipeline, que é a de origem, devemos colocar de onde sairá o código que será implantado por este fluxo, sendo neste caso do meu GitHub. Basta apenas se conectar com o GitHub, selecionar o repositório desejado e a branch, e por final clicar em "Próximo".
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.25.59.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.25.59.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.25.59.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.25.59.png)
 
 Na etapa de compilação, devemos selecionar o "Provedor de compilação", sendo neste caso o CodeBuild, visto que é através dele que daremos as instruções de como ele deverá realizar o build de nosso código Jekyll.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.48.08.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.48.08.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.48.08.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.48.08.png)
 
 Clique em "Criar projeto", e na página que abrir, preencha as informações.
 
 A primeira informação é o "Nome do projeto".
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.27.21.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.27.21.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.27.21.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.27.21.png)
 
 Em seguida, siga as seguintes instruções para configurar o ambiente de build:
 
@@ -118,19 +118,19 @@ Em seguida, siga as seguintes instruções para configurar o ambiente de build:
 
 E para finalizar, clique em "Criar projeto"
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.27.39.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.27.39.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.27.39.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.27.39.png)
 
 Com a etapa de compilação (build) configurada, podemos seguir para a etapa de implantação, ou seja, a etapa de que fará o deploy propriamente dito.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.49.30.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.49.30.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.49.30.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.49.30.png)
 
 Nesta etapa, devemos selecionar o Amazon S3 como provedor de implantação e selecionar o bucket que nós criamos anteriormente. Não esqueça de marcar a opção "Extraia o arquivo antes de implantar", visto que nosso build irá gerar um zip.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.49.54.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.49.54.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.49.54.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.49.54.png)
 
 Revise as informações e crie o pipeline.
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.50.01.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_21.50.01.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.50.01.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-21.50.01.png)
 
 ## Configurando nosso repositório
 
@@ -206,12 +206,10 @@ Para finalizar, podemos apenas realizar o commit desse código com o nome de `bu
 
 Observando nosso pipeline, podemos ver que ele foi executado com êxito!
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_22.17.57.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_22.17.57.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-22.17.57.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-22.17.57.png)
 
 Para que possamos acessar o blog, podemos ir no nosso bucket e selecionarmos a aba "Propriedades", e em seguida buscarmos a URL do nosso bucket que consta em "Endpoint de site de bucket".
 
-![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_22.19.22.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws/Screen_Shot_2021-01-21_at_22.19.22.png)
+![/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-22.19.22.png](/assets/images/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-22.19.22.png)
 
 Acessando o blog, podemos ver que nosso fluxo funcionou!
-
-[]()
