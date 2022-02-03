@@ -28,7 +28,15 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["Dicas", "Vídeos", "Desenvolvimento", "Vida", "DevOps"],
+          options: [
+            "Desenvolvimento", 
+            "DevOps",
+            "Dicas", 
+            "Experiência",
+            "Gestão de Projetos", 
+            "Vida", 
+            "Vídeos", 
+          ],
         }
       - {
           label: "Color",
@@ -36,11 +44,13 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Dicas", value: "#1abc9c" },
-              { label: "Vídeos", value: "#3498db" },
-              { label: "DevOps", value: "#9b59b6" },
               { label: "Desenvolvimento", value: "#e74c3c" },
+              { label: "DevOps", value: "#9b59b6" },
+              { label: "Dicas", value: "#1abc9c" },
+              { label: "Experiência", value: "#341f97" },
+              { label: "Gestão de Projetos", value: "#B53471" },
               { label: "Vida", value: "#6ab04c" },
+              { label: "Vídeos", value: "#3498db" },
             ],
         }
       - { label: "Redirect from", name: "redirect_from", widget: "list" }
