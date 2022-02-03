@@ -1,13 +1,16 @@
 ---
-redirect_from:
-  - /videos/2021/12/27/webinar-codeby-intelligent-search-na-vtex.html
-categories: videos
-tags: videos talk webinar
 title: "Webinar Codeby: Intelligent Search na VTEX"
 date: 2021-12-27 14:30:10 -0300
+thumbnail: /assets/images/screen-shot-2022-02-03-at-03.49.11.png
 category: Vídeos
-description: Participei de um Webinar no qual falamos de Intelligent Search e de suas aplicações no universo do e-commerce, citando exemplos como Amazon e como funciona este recurso atualmente na VTEX. Veja mais sobre o assunto!
 color: "#3498db"
+redirect_from:
+  - /videos/2021/12/27/webinar-codeby-intelligent-search-na-vtex.html
+tags: videos talk webinar
+categories: videos
+description: Participei de um Webinar no qual falamos de Intelligent Search e de
+  suas aplicações no universo do e-commerce, citando exemplos como Amazon e como
+  funciona este recurso atualmente na VTEX. Veja mais sobre o assunto!
 ---
 
 
