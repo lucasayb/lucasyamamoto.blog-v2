@@ -21,6 +21,7 @@ export const PostItemTitle = styled.div`
 export const PostItemTag = styled.span`
   align-items: center;
   background-color: ${(props) => props.color};
+  transition: background-color 0.5s;
   border-bottom: none;
   color: var(--primary-tag-text-color);
   display: flex;

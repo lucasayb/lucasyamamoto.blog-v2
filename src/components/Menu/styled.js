@@ -28,7 +28,7 @@ export const CloseIcon = styled(CloseOutline)`
 export const SideDrawerWrapper = styled.aside`
   position: fixed;
   background: var(--primary-background-color);
-	transition: background-color 0.5s;
+	transition: background 0.5s;
   width: 100%;
   height: 100vh;
   top: 60px;
