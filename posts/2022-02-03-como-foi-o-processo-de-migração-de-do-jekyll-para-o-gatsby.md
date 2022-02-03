@@ -1,11 +1,11 @@
 ---
-title: Como foi o processo de migração de do Jekyll para o Gatsby?
+title: Como aprender Inglês de fato?
 date: 2022-02-05 02:22:41
 thumbnail: /assets/images/english-banner.png
 category: Vida
 color: "#6ab04c"
-description: Vou descrever um pouco da minha jornada e os motivos da migração de
-  tecnologias entre um blog Jekyll para Gatsby
+description: Quero falar um pouco de como foi aprender Inglês durante minha vida
+  pessoal e profissional
 ---
 Uma vez me perguntaram sobre a minha experiência com o aprendizado do Inglês. Como entendo que isso muitas vezes pode ser uma dúvida daqueles que estão iniciando na área, decidi escrever esse artigo falando de algumas passagens que foram definitivas para eu falar a lingua.
 
