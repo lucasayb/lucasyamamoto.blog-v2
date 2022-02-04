@@ -34,10 +34,16 @@ export const SideDrawerWrapper = styled.aside`
   background: var(--primary-background-color);
 	transition: background 0.5s;
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 60px);
   top: 60px;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 1;
+`
+
+export const SideDrawerNavWrapper = styled.nav`
+  height: 90%;
 `
 
 export const SideDrawerNav = styled.nav`
@@ -45,7 +51,7 @@ export const SideDrawerNav = styled.nav`
   justify-content: space-around;
   display: flex;
   flex-direction: column;
-  height: calc(90vh - 60px);
+  height: 100%;
 `
 
 export const SideDrawerNavLink = styled(AniLink)`
@@ -62,12 +68,13 @@ export const SideDrawerNavLink = styled(AniLink)`
 
 export const SideDrawerSocialLinksWrapper = styled.section`
   border-top: 1px solid var(--primary-border-color);
+  height: 10%;
 `
 
 export const SideDrawerSocialLinks = styled.section`
   align-items: center;
   display: flex;
-  height: 10vh;
+  height: 100%;
   justify-content: space-around;
 `
 

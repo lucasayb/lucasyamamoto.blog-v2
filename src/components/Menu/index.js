@@ -68,24 +68,26 @@ const SideDrawer = () => {
 
   return (
     <S.SideDrawerWrapper>
-      <S.SideDrawerNav>
+      <S.SideDrawerNavWrapper>
         <SLayout.LayoutWrapper>
-          {navLinks.map((navLink, key) => (
-            <S.SideDrawerNavLink
-              cover
-              direction="left"
-              bg={getThemeColor()}
-              duration={0.6}
-              key={key}
-              to={navLink.path}
-              activeClassName="active"
-              title={navLink.name}
-            >
-              {navLink.name}
-            </S.SideDrawerNavLink>
-          ))}
+          <S.SideDrawerNav>
+            {navLinks.map((navLink, key) => (
+              <S.SideDrawerNavLink
+                cover
+                direction="left"
+                bg={getThemeColor()}
+                duration={0.6}
+                key={key}
+                to={navLink.path}
+                activeClassName="active"
+                title={navLink.name}
+              >
+                {navLink.name}
+              </S.SideDrawerNavLink>
+            ))}
+          </S.SideDrawerNav>
         </SLayout.LayoutWrapper>
-      </S.SideDrawerNav>
+      </S.SideDrawerNavWrapper>
       <S.SideDrawerSocialLinksWrapper>
         <SLayout.LayoutWrapper>
           <S.SideDrawerSocialLinks>
