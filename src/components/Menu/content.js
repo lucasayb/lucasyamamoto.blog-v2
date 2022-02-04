@@ -19,6 +19,10 @@ export const socialLinks = [
     link: 'https://twitter.com/lucasayb',
     name: 'Twitter'
   },
+  {
+    link: '/rss.xml',
+    name: 'RSS'
+  },
 ]
 
 export const navLinks = [
