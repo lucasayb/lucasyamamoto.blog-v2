@@ -28,7 +28,6 @@ export const TextNotFound = styled.p`
   font-size: 1rem;
   line-height: 30px;
   a {
-    text-decoration: none;
     display: inline-block;
   }
 `

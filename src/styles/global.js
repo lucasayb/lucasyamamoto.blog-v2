@@ -105,7 +105,9 @@ body {
 a {
   color: var(--primary-link-color);
   display: flex;
-  border-bottom: 1px dashed var(--primary-link-color);
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-underline-offset: 0.4rem;
 }
 `
 

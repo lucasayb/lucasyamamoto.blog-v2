@@ -62,7 +62,9 @@ export const SideDrawerNavLink = styled(AniLink)`
   color: var(--primary-text-color);
   &.active {
     color: var(--primary-link-color);
-    border-bottom: 1px dashed var(--primary-border-color);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 0.4rem;
   }
 `
 

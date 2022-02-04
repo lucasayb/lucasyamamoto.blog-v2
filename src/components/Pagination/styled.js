@@ -15,6 +15,7 @@ export const PaginationLink = styled(AniLink)`
   align-items: center;
   display: flex;
   text-decoration: none;
+  border-bottom: 2px dashed var(--primary-link-color);
 `
 
 export const ArrowLeftIcon = styled(ArrowLeft)`

@@ -211,7 +211,6 @@ export const PostBody = styled.section`
   }
   a {
     display: inline-block;
-    text-decoration: none;
   }
   iframe {
     margin: 10px 0;
