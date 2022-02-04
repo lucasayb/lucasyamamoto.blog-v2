@@ -118,6 +118,7 @@ module.exports = {
     'gatsby-redirect-from',
     'gatsby-plugin-meta-redirect',
     `gatsby-plugin-netlify`,
+    `gatsby-remark-gifs`,
     `gatsby-plugin-netlify-cms`, // make sure this is always the last one
   ],
   
