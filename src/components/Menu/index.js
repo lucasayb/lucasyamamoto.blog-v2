@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useLocation } from '@reach/router';
 import Icons from './Icons';
 import * as S from './styled'
+import * as SLayout from '../Layout/styled'
 
 import { navLinks, socialLinks } from './content'
 
@@ -67,38 +68,46 @@ const SideDrawer = () => {
 
   return (
     <S.SideDrawerWrapper>
-      <S.SideDrawerNav>
-        {navLinks.map((navLink, key) => (
-          <S.SideDrawerNavLink 
-            cover
-            direction="left"
-            bg={getThemeColor()}
-            duration={0.6}
-            key={key} 
-            to={navLink.path} 
-            activeClassName="active" 
-            title={navLink.name}
-          >
-            {navLink.name}
-          </S.SideDrawerNavLink>
-        ))}
-      </S.SideDrawerNav>
-      <S.SideDrawerSocialLinks>
-        {socialLinks.map((socialLink, key) => {
-          const Icon = Icons[socialLink.name];
-          return (
-            <S.SideDrawerSocialLinkItem 
-              target="_blank" 
-              title={socialLink.name} 
-              href={socialLink.link}
-              key={key}
-              rel="noopener noreferrer"
-            >
-              <S.SideDrawerSocialLinkItemIconWrapper><Icon /></S.SideDrawerSocialLinkItemIconWrapper>
-            </S.SideDrawerSocialLinkItem>
-          )
-        })}
-      </S.SideDrawerSocialLinks>
+      <S.SideDrawerNavWrapper>
+        <SLayout.LayoutWrapper>
+          <S.SideDrawerNav>
+            {navLinks.map((navLink, key) => (
+              <S.SideDrawerNavLink
+                cover
+                direction="left"
+                bg={getThemeColor()}
+                duration={0.6}
+                key={key}
+                to={navLink.path}
+                activeClassName="active"
+                title={navLink.name}
+              >
+                {navLink.name}
+              </S.SideDrawerNavLink>
+            ))}
+          </S.SideDrawerNav>
+        </SLayout.LayoutWrapper>
+      </S.SideDrawerNavWrapper>
+      <S.SideDrawerSocialLinksWrapper>
+        <SLayout.LayoutWrapper>
+          <S.SideDrawerSocialLinks>
+            {socialLinks.map((socialLink, key) => {
+              const Icon = Icons[socialLink.name];
+              return (
+                <S.SideDrawerSocialLinkItem
+                  target="_blank"
+                  title={socialLink.name}
+                  href={socialLink.link}
+                  key={key}
+                  rel="noopener noreferrer"
+                >
+                  <S.SideDrawerSocialLinkItemIconWrapper><Icon /></S.SideDrawerSocialLinkItemIconWrapper>
+                </S.SideDrawerSocialLinkItem>
+              )
+            })}
+          </S.SideDrawerSocialLinks>
+        </SLayout.LayoutWrapper>
+      </S.SideDrawerSocialLinksWrapper>
     </S.SideDrawerWrapper>
   )
 }

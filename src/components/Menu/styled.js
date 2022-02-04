@@ -19,10 +19,14 @@ export const MenuBurgerWrapper = styled.button`
 
 export const MenuBurgerIcon = styled(Menu)`
   color: var(--primary-icon-color);
+  width: 24px;
+  height: 24px;
 `
 
 export const CloseIcon = styled(CloseOutline)`
   color: var(--primary-icon-color);
+  width: 24px;
+  height: 24px;
 `
 
 export const SideDrawerWrapper = styled.aside`
@@ -30,23 +34,29 @@ export const SideDrawerWrapper = styled.aside`
   background: var(--primary-background-color);
 	transition: background 0.5s;
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 60px);
   top: 60px;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 1;
+`
+
+export const SideDrawerNavWrapper = styled.nav`
+  height: 90%;
 `
 
 export const SideDrawerNav = styled.nav`
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
-  height: calc(90vh - 60px);
+  height: 100%;
 `
 
 export const SideDrawerNavLink = styled(AniLink)`
   display: inline-block;
-  font-size: 2.325rem;
+  font-size: 3.325rem;
   text-decoration: none;
   border-bottom: none;
   color: var(--primary-text-color);
@@ -56,11 +66,15 @@ export const SideDrawerNavLink = styled(AniLink)`
   }
 `
 
-export const SideDrawerSocialLinks = styled.section`
+export const SideDrawerSocialLinksWrapper = styled.section`
   border-top: 1px solid var(--primary-border-color);
+  height: 10%;
+`
+
+export const SideDrawerSocialLinks = styled.section`
   align-items: center;
   display: flex;
-  height: 10vh;
+  height: 100%;
   justify-content: space-around;
 `
 

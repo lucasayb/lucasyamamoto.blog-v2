@@ -26,14 +26,23 @@ export const ProfileInfo = styled.section`
 
 export const ProfileAuthor = styled.h1`
   color: var(--primary-text-color);
-  font-size: 1.25rem;
+  font-size: 0.8125rem;
+  @media (min-width: 350px) {
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.25rem;
+  }
   font-weight: 100 !important;
   text-decoration: none;
 `
 
 export const ProfilePosition = styled.h2`
   color: var(--primary-text-color);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  @media (min-width: 350px) {
+    font-size: 0.8125rem;
+  }
   font-weight: 500 !important;
   text-decoration: none;
 `
