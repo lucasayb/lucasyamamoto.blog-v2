@@ -23,6 +23,7 @@ collections:
           widget: "datetime",
           format: "YYYY-MM-DD hh:mm:ss",
         }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - {
           label: "Category",
@@ -54,9 +55,8 @@ collections:
               { label: "Vídeos", value: "#3498db" },
             ],
         }
-      - { label: "Redirect from", name: "redirect_from", widget: "list" }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Redirect from", name: "redirect_from", widget: "list" }
 
   - name: "categories"
     label: "Category"
