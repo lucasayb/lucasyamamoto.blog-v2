@@ -6,8 +6,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/assets/images"
-public_folder: "/assets/images"
+media_folder: "static/assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "categories"
