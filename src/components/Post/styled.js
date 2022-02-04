@@ -208,6 +208,7 @@ export const PostBody = styled.section`
   }
   p {
     line-height: 2rem;
+    overflow-wrap: anywhere;
   }
   a {
     display: inline-block;
