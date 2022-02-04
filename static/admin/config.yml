@@ -10,8 +10,31 @@ media_folder: "static/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "categories"
+    label: "Categories"
+    folder: "categories"
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - { 
+          label: "Name", 
+          name: "name", 
+          widget: "string" 
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        } # The fields for each document, usually in front matter
+      - { 
+          label: "Color", 
+          name: "color", 
+          widget: "color",
+          allowInput: true
+        }
+
+  - name: "blog_posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog Posts" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -28,15 +51,16 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: [
-            "Desenvolvimento", 
-            "DevOps",
-            "Dicas", 
-            "Experiência",
-            "Gestão de Projetos", 
-            "Vida", 
-            "Vídeos", 
-          ],
+          options:
+            [
+              "Desenvolvimento",
+              "DevOps",
+              "Dicas",
+              "Experiência",
+              "Gestão de Projetos",
+              "Vida",
+              "Vídeos",
+            ],
         }
       - {
           label: "Color",
