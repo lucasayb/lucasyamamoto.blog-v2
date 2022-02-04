@@ -44,13 +44,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: `${__dirname}/static/assets/uploads`,
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
-            },
-          },
-          {
             resolve: `gatsby-remark-relative-images`,
             options: {
               name: "uploads",
@@ -62,6 +55,13 @@ module.exports = {
               // No fields are excluded by default
               exclude: ['redirect_from'],
             }
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `assets/files`,
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
           },
           {
             resolve: `gatsby-remark-images`,
