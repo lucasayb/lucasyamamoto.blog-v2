@@ -11,7 +11,7 @@ Estava eu contente escrevendo meu artigo sobre o desenvolvimento desse novo blog
 
 ![Nova aba de busca do Chrome com caracteres bizarros](/assets/images/search-with-roboto.png "Nova aba de busca do Chrome com caracteres bizarros")
 
-A página de busca estava dessa forma do chrome, e quando eu digitava qualquer coisa, as letras ficavam embaraçadas.
+A página de busca estava dessa forma no Chrome, e quando eu digitava qualquer coisa, as letras ficavam embaralhadas.
 
 Fui olhar mais a fundo e a princípio pensei que houvesse alguma extensão indesejada instalada no meu Chrome
 
@@ -31,7 +31,7 @@ Nele, basicamente o usuário estava dizendo que estava com o mesmo problema e ba
 
 ![Fonte Roboto instalada no sistema](/assets/images/with-roboto.png "Fonte Roboto instalada no sistema")
 
-E ao desinstala-la...
+E ao desinstalá-la...
 
 ![Fonte Roboto desinstalada do sistema](/assets/images/without-roboto.png "Fonte Roboto desinstalada do sistema")
 
