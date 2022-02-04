@@ -10,29 +10,6 @@ media_folder: "static/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "categories"
-    label: "Category"
-    folder: "categories"
-    create: true
-    fields: # The fields for each document, usually in front matter
-      - { 
-          label: "Name", 
-          name: "name", 
-          widget: "string" 
-        }
-      - {
-          label: "Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DD hh:mm:ss",
-        } # The fields for each document, usually in front matter
-      - { 
-          label: "Color", 
-          name: "color", 
-          widget: "color",
-          allowInput: true
-        }
-
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
@@ -80,3 +57,26 @@ collections:
       - { label: "Redirect from", name: "redirect_from", widget: "list" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "categories"
+    label: "Category"
+    folder: "categories"
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - { 
+          label: "Name", 
+          name: "name", 
+          widget: "string" 
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        } # The fields for each document, usually in front matter
+      - { 
+          label: "Color", 
+          name: "color", 
+          widget: "color",
+          allowInput: true
+        }
