@@ -71,7 +71,8 @@ module.exports = {
               backgroundColor: 'transparent'
             }
           },
-          `gatsby-remark-lazy-load`
+          `gatsby-remark-lazy-load`,
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -182,5 +183,5 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`, // make sure this is always the last one
   ],
-  
+
 }
