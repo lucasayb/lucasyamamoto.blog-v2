@@ -11,11 +11,6 @@ module.exports = {
     siteUrl: `https://www.lucasyamamoto.com`,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -114,9 +109,15 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
     'gatsby-redirect-from',
     'gatsby-plugin-meta-redirect',
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`, // make sure this is always the last one
   ],
   
