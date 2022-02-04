@@ -43,6 +43,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          "gatsby-remark-gifs",
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
@@ -118,7 +119,6 @@ module.exports = {
     'gatsby-redirect-from',
     'gatsby-plugin-meta-redirect',
     `gatsby-plugin-netlify`,
-    `gatsby-remark-gifs`,
     `gatsby-plugin-netlify-cms`, // make sure this is always the last one
   ],
   
