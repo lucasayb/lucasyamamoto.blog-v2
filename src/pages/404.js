@@ -16,7 +16,18 @@ const NotFoundPage = () => (
       </S.SorryGifWrapper>
       <S.TitleNotFound>404</S.TitleNotFound>
       <S.SubTitleNotFound>Desculpa :( Página não encontrada</S.SubTitleNotFound>
-      <S.TextNotFound>A página que você buscou não pôde ser encontrada. Utilize minha excelente busca da Algolia pra encontrar o que você deseja clicando <AniLink title="Ir para a busca" bg={getThemeColor()} duration={0.6} cover direction="top" to="/search">aqui</AniLink></S.TextNotFound>
+      <S.TextNotFound>A página que você buscou não pôde ser encontrada. Utilize minha excelente busca da Algolia pra encontrar o que você deseja clicando {" "}
+        <AniLink 
+          to="/search" 
+          title="Ir para a busca" 
+          duration={0.6}
+          cover
+          direction="top"
+          bg={getThemeColor()}
+        >
+          aqui
+        </AniLink>
+      </S.TextNotFound>
     </S.NotFoundWrapper>
   </Layout>
 )
