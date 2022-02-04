@@ -1,7 +1,7 @@
 ---
 title: Smart Talk na CodeBy
 date: 2019-04-04 12:20:30 -0300
-thumbnail: /assets/images/screen-shot-2022-02-03-at-03.46.00.png
+thumbnail: /assets/uploads/screen-shot-2022-02-03-at-03.46.00.png
 category: Vídeos
 color: "#3498db"
 redirect_from:

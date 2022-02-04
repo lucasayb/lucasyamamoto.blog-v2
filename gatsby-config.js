@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
-        path: `${__dirname}/static/assets/images`,
+        path: `${__dirname}/static/assets/uploads`,
       },
     },
     {
@@ -46,7 +46,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destinationDir: `${__dirname}/static/assets/files`,
+              destinationDir: `${__dirname}/static/assets/uploads`,
               ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
             },
           },

@@ -4,7 +4,7 @@ redirect_from:
 title:  "2022: Ano novo, grandes mudanças"
 date:   2022-01-16 15:43:01 -0300
 category: Vida
-thumbnail: /assets/images/2022.jpg
+thumbnail: /assets/uploads/2022.jpg
 description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
 color: "#6ab04c"
 ---

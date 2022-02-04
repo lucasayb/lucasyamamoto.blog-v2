@@ -4,7 +4,7 @@ redirect_from:
 title: "7 dicas para a integração perfeita"
 date: 2018-06-21 18:55:41 -0300
 category: Dicas
-thumbnail: /assets/images/integracoes.jpg
+thumbnail: /assets/uploads/integracoes.jpg
 description: Hoje em dia, muitas empresas que fazem o próprio site para se inserir na web decidem não abrir mão de seu ERP.
 color: "#1abc9c"
 ---

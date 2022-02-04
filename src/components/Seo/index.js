@@ -29,7 +29,7 @@ const Seo = ({ description, lang, meta, title, image }) => {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const url = site.siteMetadata.siteUrl
-  const ogImage = image ? `${url}${image}` : `/assets/images/default.png`
+  const ogImage = image ? `${url}${image}` : `/assets/uploads/default.png`
 
   return (
     <Helmet

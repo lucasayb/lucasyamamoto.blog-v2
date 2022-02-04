@@ -4,7 +4,7 @@ redirect_from:
 title: "Montando um ambiente de desenvolvimento com Docker e VSCode"
 date: 2021-01-22 17:44:02 -0300
 category: Desenvolvimento
-thumbnail: /assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-thumbnail.jpg
+thumbnail: /assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-thumbnail.jpg
 description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
 color: "#e74c3c"
 ---
@@ -28,11 +28,11 @@ Instalar o Docker no Mac é algo bem direto para falar a verdade. Basta fazer o 
 
 E fazer o famoso processo de drag and drop do ícone do app para a pasta `applications` do seu Mac OS.
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-docker-app-drag.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-docker-app-drag.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-docker-app-drag.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-docker-app-drag.png)
 
 E abrindo a aplicação, o ícone do Docker aparecerá na barra de tarefas.
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-16.25.36.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-16.25.36.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-16.25.36.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-16.25.36.png)
 
 Bem fácil, não?
 
@@ -87,25 +87,25 @@ O fluxo para utilizá-la é simples: após realizar a instalação dela, digite 
 
 Nessa busca, você terá muitas opções interessantes. A primeira que você deverá utilizar é "Add Development Container Configuration Files..."
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.02.22.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.02.22.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.02.22.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.02.22.png)
 
 Assim que selecioná-la, uma lista de opções irá se abrir para selecionar a tecnologia na qual seu container será baseado. Normalmente, já deverá aparecer em primeiro a tecnologia principal encontrada no seu projeto com base no seu código, mas caso não seja a correta, clique em "Show all definitions" no final da lista e busque a tecnologia desejada.
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.00.57.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.00.57.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.00.57.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.00.57.png)
 
 Assim que selecionar a tecnologia, três arquivos serão criados dentro de uma pasta chamada `.devcontainer`.  Esses arquivos são instruções indicando como o Docker deve lidar com a instalação e gerenciamento das tecnologias e como ele deverá executar sua aplicação. No geral, são instruções básicas de instalação da tecnologia em questão.
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.16.30.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.16.30.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.16.30.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.16.30.png)
 
 Em seguida, o próximo comando executado deverá ser o "Open folder in container".
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.15.29.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.15.29.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.15.29.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.15.29.png)
 
 Basicamente este comando irá executar o seu projeto em um container Docker, o que nos permite instalar as bibliotecas desejadas, configurar nosso ambiente totalmente isolado e por fim, limpá-lo para não ocupar muita memória em nosso sistema.
 
 Ao selecionar a opção acima, o Docker irá baixar a imagem base do Docker Hub, realizar o build do container com base no `Dockerfile` que consta na pasta `.devcontainer` e por fim executá-lo. Isso leva alguns minutos na primeira execução. Mas o processo é esse!
 
-![/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.21.31.png](/assets/images/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.21.31.png)
+![/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.21.31.png](/assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-17.21.31.png)
 
 Com o ambiente configurado, você deverá ter acesso ao terminal do container e tudo irá funcionar da forma que você está acostumado!
 
