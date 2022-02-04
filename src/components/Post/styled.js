@@ -5,6 +5,10 @@ export const PostWrapper = styled.section`
   padding: 15px;
 `
 
+export const PostSocial9Wrapper = styled.section`
+  padding: 15px 0;
+`
+
 export const PostHeader = styled.section`
   align-items: center;
   display: flex;

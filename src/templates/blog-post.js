@@ -19,14 +19,20 @@ const BlogPost = ({ data }) => {
       />
       <S.PostWrapper>
         <S.PostTitle>{frontmatter.title}</S.PostTitle>
+        <S.PostSocial9Wrapper>
+          <div className="s9-widget-wrapper" />
+        </S.PostSocial9Wrapper>
         <S.PostHeader>
           <S.PostDate>{frontmatter.date}</S.PostDate>
           <S.PostTag color={frontmatter.color}>{frontmatter.category}</S.PostTag>
         </S.PostHeader>
+        
+
         <S.PostDescription>{frontmatter.description}</S.PostDescription>
         {frontmatter.thumbnail ? <S.PostThumbnail fluid={frontmatter.thumbnail.childImageSharp.fluid} /> : <></>}
         
         <S.PostBody dangerouslySetInnerHTML={{__html: html }} />
+        <div className="s9-widget-wrapper" />
       </S.PostWrapper>
       <Comments url={fields.slug} title={frontmatter.title} />
     </Layout>

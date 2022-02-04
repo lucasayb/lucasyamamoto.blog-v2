@@ -76,6 +76,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-social9-socialshare`,
+      options: {
+        content:  process.env.GATSBY_SOCIAL9_CONTENT,
+        async:  true,
+			  defer:  true
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
