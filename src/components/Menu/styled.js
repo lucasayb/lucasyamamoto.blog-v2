@@ -4,6 +4,31 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { Menu } from '@styled-icons/evaicons-solid/Menu'
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
 
+export const MenuContextWrapper = styled.div`
+  .transition-enter {
+    position: fixed;
+    opacity: 0;
+    transform: translateY(-110%);
+    transition: 0.5s ease;
+  }
+  .transition-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.5s ease;
+  }
+  .transition-exit {
+    position: fixed;
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.5s ease;
+  }
+  .transition-exit-active {
+    opacity: 0;
+    transform: translateY(-110%);
+    transition: 0.5s ease;
+  }
+`
+
 export const MenuBurgerWrapper = styled.button`
   align-items: center;
   background-color: var(--primary-background-color);
