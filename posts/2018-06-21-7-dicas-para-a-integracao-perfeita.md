@@ -1,12 +1,14 @@
 ---
+title: 7 dicas para a integração perfeita
+date: 2018-06-21 18:55:41 -0300
+description: Hoje em dia, muitas empresas que fazem o próprio site para se
+  inserir na web decidem não abrir mão de seu ERP.
+thumbnail: /assets/uploads/integracoes.jpg
+category: Dicas
+related_category: Desenvolvimento
+color: "#1abc9c"
 redirect_from:
   - /dicas/2018/06/21/7-dicas-para-a-integracao-perfeita.html
-title: "7 dicas para a integração perfeita"
-date: 2018-06-21 18:55:41 -0300
-category: Dicas
-thumbnail: /assets/uploads/integracoes.jpg
-description: Hoje em dia, muitas empresas que fazem o próprio site para se inserir na web decidem não abrir mão de seu ERP.
-color: "#1abc9c"
 ---
 
 Hoje em dia, muitas empresas que fazem o próprio site para se inserir na web decidem não abrir mão de seu ERP. Para casos como esse, é necessário desenvolver uma integração, micro aplicação com a responsabilidade de permitir que o sistema web consiga “conversar” com a aplicação própria da empresa. Na nossa trajetória na Codeby, conseguimos obter muitos erros e acertos, e viemos trazê-los aqui para mostrar a vocês, possivelmente, a “fórmula” da integração. Confira!
