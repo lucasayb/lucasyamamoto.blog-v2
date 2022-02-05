@@ -10,11 +10,11 @@ redirect_from: []
 ---
 Desde quando fiz meu blog com Jekyll, adorei escrever em markdown. Mas confesso que o processo todo era muito manual e as vezes surgiam ideias para artigos que rapidamente iam embora só de pensar em todo o fluxo e estratagema que precisava fazer para publicar uma simples postagem. Até ontem, eu estava utilizando meu blog com Jekyll com o tema Minima, que é o tema base do Jekyll. Ele é relativamente customizável e, para um blog, é bonito, além de ter bastantes funcionalidades por ser um tema feito por uma comunidade bem grande.
 
-Durante esse processo de migração que venho planejando há um tempo (mas me faltava tempo hehe), descobri o Netlify CMS, como descrevi no meu post anterior ([2022: Ano novo, grandes mudanças](https://www.lucasyamamoto.com/2022-ano-novo-grandes-mudancas/)). Para Jekyll, ele já serviria e muito! Fica a dica para quem tem interesse em facilitar o processo de criação de posts com o Jekyll. Mas eu decidi ir além, mudar ainda mais e aprender algo ainda mais novo.
+Durante esse processo de migração que venho planejando há um tempo, descobri o Netlify CMS, como descrevi no meu post anterior ([2022: Ano novo, grandes mudanças](https://www.lucasyamamoto.com/2022-ano-novo-grandes-mudancas/)). Para Jekyll, ele já serviria e muito! Fica a dica para quem tem interesse em facilitar o processo de criação de posts com o Jekyll. Mas eu decidi ir além, mudar ainda mais e aprender algo ainda mais novo.
 
-Em um determinado dia, vi uma loja online, [Marin Brasil](https://www.marinbrasil.com.br/), que estava utilizando uma tecnologia que a deixava muito rápida. Ela é feita em VTEX, mas o trabalho que o time que a desenvolveu ficou realmente fantástico e vai muito além da plataforma. Atingia quase 99 pontos de performance no [Web.dev](https://web.dev). Fiquei abismado. Fui pesquisar um pouco e entender qual tecnologia estava sendo utilizada para deixá-la dessa forma e, pasmem, era Gatsby!
+Em um determinado dia, vi uma loja online, [Marin Brasil](https://www.marinbrasil.com.br/), que estava utilizando uma tecnologia que a deixava muito rápida. Ela é feita em VTEX, mas o trabalho do time que a desenvolveu ficou realmente fantástico e vai muito além da plataforma. Atingia quase 99 pontos de performance no [Web.dev](https://web.dev). Fiquei abismado. Fui pesquisar um pouco mais e entender qual tecnologia estava sendo utilizada para deixá-la dessa forma e, pasmem, era Gatsby!
 
-Desde então, estou querendo aprender Gatsby mas não tinha tempo pois meu trabalho na Codeby é full time. Porém no dia 26 de Janeiro de 2022 entrei de férias (fiz uma cirurgia então não chega a ser exatamente férias rsrs). Acabei ficando ocioso em casa e vi uma excelente oportunidade pra estudar algo.
+Desde então, estou querendo aprender Gatsby mas não tinha tempo pois meu trabalho na Codeby é full time. Porém no dia 26 de Janeiro de 2022 entrei de férias (fiz uma cirurgia logo não chegam a ser exatamente férias rsrs). Acabei ficando ocioso em casa e vi uma excelente oportunidade pra estudar algo.
 
 ## Design
 
@@ -34,7 +34,7 @@ Esse era o design inicial:
 
 ![Busca do blog](/assets/uploads/busca-do-blog.png "Busca do blog")
 
-Ao longo do desenvolvimento, algumas coisas mudaram, com algumas cores e alguns ícones que busquei do styled icons. Planejei tudo, tenho o arquivo XD que em breve compartilho aqui.
+Ao longo do desenvolvimento, algumas coisas mudaram, como algumas cores e alguns ícones que busquei do styled icons. Planejei tudo, tenho o arquivo XD que em breve compartilho aqui.
 
 A ideia aqui foi deixar parecido com o tema Minima do Jekyll, mudando coisas bem pontuais como as categorias coloridas, a busca, o menu e o dark mode (que não está no design).
 
@@ -101,7 +101,7 @@ Além disso, como no Netlify CMS você declara quais atributos você deseja pree
 
 ![Redirect from no Netlify CMS](/assets/uploads/redirect_from_gif.gif "Redirect from no Netlify CMS")
 
-Para fazer o `redirect_from` funcionar, cabe uma dica caso você utilize o plugin **[gatsby-remark-relative-images](https://www.gatsbyjs.com/plugins/gatsby-remark-relative-images/)**: basicamente ele vai converter todas as URLs relativas no seu front matter para as imagens geradas com a otimização do Gatsby. O problema é que ele estava reconhecendo o redirect_from como uma imagem, por ter uma URL relativa, e consequentemente estava causando erro no build. A única coisa que precisei fazer foi adicionar o redirect_from no atributo `exclude` nas configurações do plugin dentro do meu `gatsby-config.js`:
+Para fazer o `redirect_from` funcionar, cabe uma dica caso você utilize o plugin [gatsby-remark-relative-images](https://www.gatsbyjs.com/plugins/gatsby-remark-relative-images/): basicamente ele vai converter todas as URLs relativas no seu front matter para as imagens geradas com a otimização do Gatsby. O problema é que ele estava reconhecendo o `redirect_from` como uma imagem, por ter uma URL relativa, e consequentemente estava causando erro no build. A única coisa que precisei fazer foi adicionar o `redirect_from` no atributo `exclude` nas configurações do plugin dentro do meu `gatsby-config.js`:
 
 ```jsx
 {
@@ -115,12 +115,16 @@ Para fazer o `redirect_from` funcionar, cabe uma dica caso você utilize o plugi
 }
 ```
 
-Deixei até redundante pois inseri a `thumbnail` dentro do `include` e o `redirect_from` no `exclude`. No final, funcionou perfeitamente. Fica apenas de lembrete para caso eu queira adicionar o excluir campos para serem processados por esse plugin.
+Deixei até redundante pois inseri a `thumbnail` dentro do `include` e o `redirect_from` no `exclude`. No final, funcionou perfeitamente. Fica apenas de lembrete para caso eu queira adicionar ou excluir campos para serem processados por esse plugin.
 
 ## Colocando no ar
 
-O Netlify CMS foi feito pela Netlify, o que faz com que o processo de deploy de todo o blog seja bem automatizado, bastante apenas fazer o login OAuth com o GitHub para conectar o repositório no próprio Netlify. Ah, o Netlify também é gratuito, tendo planos pagos.
+O Netlify CMS foi feito pela Netlify, o que faz com que o processo de deploy de todo o blog seja bem automatizado, visto que a Netlify tem suporte nativo para Gatsby, bastando apenas fazer o login OAuth com o GitHub para conectar o repositório no próprio Netlify. Ah, o Netlify também é gratuito, tendo alguns planos pagos.
 
 Único ponto de atenção que tive de ter foi em relação ao CMS. Eu estava recebendo um erro ao tentar fazer o login com o GitHub no CMS. Bastou apenas fazer os passos de acordo com o link abaixo para configurar o CMS de forma correta.
 
 <https://docs.netlify.com/visitor-access/oauth-provider-tokens/#using-an-authentication-provider>
+
+E pronto!
+
+Foi um processo muito bom de aprendizado durante o desenvolvimento desse blog. Gatsby é incrível e bastante customizável. Tenho planos de adicionar outras collections dentro do meu Netlify CMS para tirar o foco apenas de Posts.
