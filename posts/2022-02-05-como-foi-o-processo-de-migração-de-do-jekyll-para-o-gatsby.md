@@ -1,5 +1,5 @@
 ---
-title: Como foi o processo de migração de do Jekyll para o Gatsby?
+title: Como foi o processo de migração do Jekyll para o Gatsby?
 date: 2022-02-04 10:35:19
 description: Vou descrever um pouco da minha jornada e os motivos da migração de
   tecnologias entre um blog Jekyll para Gatsby
