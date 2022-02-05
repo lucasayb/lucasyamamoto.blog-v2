@@ -97,22 +97,3 @@ export const SideDrawerSocialLinksWrapper = styled.section`
   border-top: 1px solid var(--primary-border-color);
   height: 10%;
 `
-
-export const SideDrawerSocialLinks = styled.section`
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: space-around;
-`
-
-export const SideDrawerSocialLinkItem = styled.a`
-  color: var(--primary-icon-color);
-  text-decoration: none;
-  border: none;
-`
-
-export const SideDrawerSocialLinkItemIconWrapper = styled.div`
-  fill: var(--primary-icon-color);
-  width: 30px;
-  height: 30px;
-`

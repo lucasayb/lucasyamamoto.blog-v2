@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import * as S from '../components/Post/styled'
+import SocialLinks from '../components/SocialLinks'
 
 const AboutPage = () => (
   <Layout>
@@ -17,6 +18,8 @@ const AboutPage = () => (
         <p>Em 2020, desenvolvi um sistema integrador para ambientes VTEX utilizando Python, responsável por migrar centenas de milhares de produtos e outros dados de 6 shoppings diferentes para o ambiente atual da ONStores.</p>
         <p>Em 2021, fui um dos responsáveis ​​por triplicar a receita da Codeby, além de ajudá-la a crescer mais de 200% no mesmo ano, sendo hoje o atual líder da equipe de operações e desenvolvimento da Codeby, responsável pela gestão de uma equipe de mais de 60 pessoas.</p>
         <p>A cada dia procuro me especializar com livros voltados para gestão e tecnologia, além de participar de eventos com o objetivo de me atualizar e descobrir novos caminhos a serem seguidos.</p>
+        <h2>Contate-me em minhas redes sociais</h2>
+        <SocialLinks />
       </S.PostBody>
     </S.PostWrapper>
   </Layout>

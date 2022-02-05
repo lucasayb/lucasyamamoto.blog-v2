@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useLocation } from '@reach/router';
-import Icons from './Icons';
 import * as S from './styled'
 import * as SLayout from '../Layout/styled'
 
-import { navLinks, socialLinks } from './content'
-
+import { navLinks } from './content'
+import SocialLinks from '../SocialLinks'
 import getThemeColor from '../../utils/getThemeColor';
 
 export const MenuContext = React.createContext({});
@@ -89,22 +88,7 @@ const SideDrawer = () => {
           </S.SideDrawerNavWrapper>
           <S.SideDrawerSocialLinksWrapper>
             <SLayout.LayoutWrapper>
-              <S.SideDrawerSocialLinks>
-                {socialLinks.map((socialLink, key) => {
-                  const Icon = Icons[socialLink.name];
-                  return (
-                    <S.SideDrawerSocialLinkItem
-                      target="_blank"
-                      title={socialLink.name}
-                      href={socialLink.link}
-                      key={key}
-                      rel="noopener noreferrer"
-                    >
-                      <S.SideDrawerSocialLinkItemIconWrapper><Icon /></S.SideDrawerSocialLinkItemIconWrapper>
-                    </S.SideDrawerSocialLinkItem>
-                  )
-                })}
-              </S.SideDrawerSocialLinks>
+              <SocialLinks />
             </SLayout.LayoutWrapper>
           </S.SideDrawerSocialLinksWrapper>
         </S.SideDrawerWrapper>
