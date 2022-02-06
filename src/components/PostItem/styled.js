@@ -7,7 +7,7 @@ export const PostItemWrapper = styled.section`
 `
 export const PostItemTitle = styled.div`
   color: var(--primary-text-color);
-  transition: color 0.5s;
+  transition: color var(--transition-time);
   font-size: 1.375rem;
   @media screen and (min-width: 800px) {
     font-size: 1.375rem;
@@ -21,7 +21,7 @@ export const PostItemTitle = styled.div`
 export const PostItemTag = styled.span`
   align-items: center;
   background-color: ${(props) => props.color};
-  transition: background-color 0.5s;
+  transition: background-color var(--transition-time);
   border-bottom: none;
   color: var(--primary-tag-text-color);
   display: flex;

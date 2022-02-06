@@ -7,6 +7,12 @@ export const PostWrapper = styled.section`
 
 export const PostSocial9Wrapper = styled.section`
   padding: 15px 0;
+  .s9-btn-share {
+    transition: opacity var(--transition-time);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 `
 
 export const PostHeader = styled.section`
@@ -19,7 +25,7 @@ export const PostHeader = styled.section`
 export const PostTag = styled.section`
   align-items: center;
   background-color: ${(props) => props.color};
-	transition: background-color 0.5s;
+	transition: background-color var(--transition-time);
   color: var(--primary-tag-text-color);
   display: flex;
   font-size: 1rem;
@@ -85,7 +91,7 @@ export const PostBody = styled.section`
 
   table tr:nth-child(even) {
     background-color: var(--primary-table-nth-child-even-color);
-	  transition: background-color 0.5s;
+	  transition: background-color var(--transition-time);
   }
 
   table th,
@@ -95,7 +101,7 @@ export const PostBody = styled.section`
 
   table th {
     background-color: var(--primary-table-nth-child-even-color);
-    transition: background-color 0.5s;
+    transition: background-color var(--transition-time);
     border: 1px solid var(--primary-table-border-color);
   }
 
@@ -175,7 +181,7 @@ export const PostBody = styled.section`
     color: var(--secondary-text-color);
     border-radius: 3px;
     background-color: var(--primary-codeblock-background-color);
-    transition: background-color 0.5s;
+    transition: background-color var(--transition-time);
   }
 
   code {

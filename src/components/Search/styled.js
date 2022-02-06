@@ -5,7 +5,7 @@ import { Search } from '@styled-icons/boxicons-regular/Search'
 export const SearchIconWrapper = styled(AniLink)`
   align-items: center;
   background-color: var(--primary-background-color);
-	transition: background-color 0.5s;
+	transition: background-color var(--transition-time);
   border: none;
   cursor: pointer;
   display: flex;
@@ -49,7 +49,7 @@ export const SearchBoxWrapper = styled.section`
   }
   .ais-SearchBox-input {
     background-color: var(--primary-background-color);
-	  transition: background-color 0.5s;
+	  transition: background-color var(--transition-time);
     border: none;
     border-bottom: 1px solid var(--primary-border-color);
     font-size: 1.125rem;

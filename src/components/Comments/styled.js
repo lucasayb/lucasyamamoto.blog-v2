@@ -8,7 +8,7 @@ export const CommentsWrapper = styled.section`
 
 export const CommentsBody = styled.section`
   background-color: white;
-	transition: background-color 0.5s;
+	transition: background-color var(--transition-time);
   color: var(--primary-text-color) !important;
   padding: 15px;
   iframe[src*="ads-iframe"] {

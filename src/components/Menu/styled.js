@@ -9,30 +9,30 @@ export const MenuContextWrapper = styled.div`
     position: fixed;
     opacity: 0;
     transform: translateY(-110%);
-    transition: 0.5s ease;
+    transition: all var(--transition-time);
   }
   .transition-enter-active {
     opacity: 1;
     transform: translateY(0%);
-    transition: 0.5s ease;
+    transition: all var(--transition-time);
   }
   .transition-exit {
     position: fixed;
     opacity: 1;
     transform: translateY(0%);
-    transition: 0.5s ease;
+    transition: all var(--transition-time);
   }
   .transition-exit-active {
     opacity: 0;
     transform: translateY(-110%);
-    transition: 0.5s ease;
+    transition: all var(--transition-time);
   }
 `
 
 export const MenuBurgerWrapper = styled.button`
   align-items: center;
   background-color: var(--primary-background-color);
-	transition: background-color 0.5s;
+	transition: background-color var(--transition-time);
   cursor: pointer;
   display: flex;
   width: 38px;
@@ -57,7 +57,7 @@ export const CloseIcon = styled(CloseOutline)`
 export const SideDrawerWrapper = styled.aside`
   position: fixed;
   background: var(--primary-background-color);
-	transition: background 0.5s;
+	transition: background var(--transition-time);
   width: 100%;
   height: calc(100% - 60px);
   top: 60px;

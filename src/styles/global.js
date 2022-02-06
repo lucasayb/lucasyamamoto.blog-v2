@@ -61,6 +61,7 @@ body.dark {
 	--primary-icon-color: #ffffff;
   --secondary-text-color: #ffffff;
   --primary-link-color: #686de0;
+  --primary-link-color-hover: #a3a6ff;
 	--primary-tag-text-color: #ffffff;
 	--primary-codeblock-border-color: #30336b;
 	--primary-codeblock-background-color: #0e0826;
@@ -68,6 +69,7 @@ body.dark {
 	--primary-table-border-color: #1e173d;
 	--primary-blockquote-border-color: #1e173d;
 	--primary-blockquote-text-color: #bca7e5;
+	--transition-time: 0.5s;
 }
 body.light {
 	--primary-background-color: #fff;
@@ -76,6 +78,7 @@ body.light {
 	--primary-icon-color: #000000;
   --secondary-text-color: #ffffff;
   --primary-link-color: #686de0;
+  --primary-link-color-hover: #a3a6ff;
 	--primary-tag-text-color: #ffffff;
 	--primary-codeblock-border-color: #404040;
 	--primary-codeblock-background-color: #212121;
@@ -83,10 +86,11 @@ body.light {
 	--primary-table-border-color: #1e173d;
 	--primary-blockquote-border-color: #1e173d;
 	--primary-blockquote-text-color: #bca7e5;
+	--transition-time: 0.5s;
 }
 body {
 	background-color: var(--primary-background-color);
-	transition: background-color 0.5s;
+	transition: background-color var(--transition-time);
   font: 400 18px/1.5 'Roboto', sans-serif;
   color: var(--primary-text-color);
   -webkit-text-size-adjust: 100%;
@@ -108,6 +112,10 @@ a {
 	text-decoration: underline;
 	text-decoration-style: dashed;
 	text-underline-offset: 0.4rem;
+	transition: color var(--transition-time);
+	&:hover {
+		color: var(--primary-link-color-hover);
+	}
 }
 `
 

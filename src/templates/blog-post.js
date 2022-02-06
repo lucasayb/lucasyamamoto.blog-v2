@@ -32,7 +32,9 @@ const BlogPost = ({ data }) => {
         {frontmatter.thumbnail ? <S.PostThumbnail fluid={frontmatter.thumbnail.childImageSharp.fluid} /> : <></>}
         
         <S.PostBody dangerouslySetInnerHTML={{__html: html }} />
-        <div className="s9-widget-wrapper" />
+        <S.PostSocial9Wrapper>
+          <div className="s9-widget-wrapper" />
+        </S.PostSocial9Wrapper>
       </S.PostWrapper>
       <Comments url={fields.slug} title={frontmatter.title} />
     </Layout>
