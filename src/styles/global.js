@@ -88,6 +88,10 @@ body.light {
 	--primary-blockquote-text-color: #bca7e5;
 	--transition-time: 0.5s;
 }
+
+#disqus_thread .sans-serif {
+		color: white !important;
+	}
 body {
 	background-color: var(--primary-background-color);
 	transition: background-color var(--transition-time);
