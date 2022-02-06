@@ -42,5 +42,3 @@ Apesar de o nome do artigo falar sobre a integração perfeita, isso infelizment
 *Para isso, existem diversos frameworks ou robôs desenvolvidos para encontrar uma grande quantidade de possíveis exceções que impeçam o funcionamento adequado do software.
 
 Por fim, a integração perfeita é aquela que funciona e que possui o objetivo atingido. Por mais que seu cliente seja uma empresa de grande porte, desenvolver uma integração de sistemas não deve ser uma tarefa gigante. Pode ser complicada, ter altos e baixos e na pior das hipóteses uma integração funcional, porém com grandes dificuldades para uma manutenção. Porém busque sempre atingir seu objetivo final e jamais perca a transparência diante do cliente.
-
-O post [7 dicas para a integração perfeita](https://codeby.com.br/blogs/codeby/7-dicas-para-a-integracao-perfeita){:target="_blank"}{:rel="nofollow"} apareceu primeiro em [Blog Codeby](https://codeby.com.br/blogs/codeby){:target="_blank"}{:rel="nofollow"}.
