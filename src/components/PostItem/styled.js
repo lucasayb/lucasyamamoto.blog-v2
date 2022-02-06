@@ -18,21 +18,6 @@ export const PostItemTitle = styled.div`
     color: var(--primary-link-color);
   }
 `
-export const PostItemTag = styled.span`
-  align-items: center;
-  background-color: ${(props) => props.color};
-  transition: background-color var(--transition-time);
-  border-bottom: none;
-  color: var(--primary-tag-text-color);
-  display: flex;
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  height: 25px; 
-  padding: 0 15px;
-  font-weight: 100;
-  text-decoration: none;
-`
 export const PostItemDate = styled.time`
   color: var(--primary-text-color);
   font-size: 0.875rem;

@@ -62,7 +62,7 @@ body.dark {
   --secondary-text-color: #ffffff;
   --primary-link-color: #686de0;
   --primary-link-color-hover: #a3a6ff;
-	--primary-tag-text-color: #ffffff;
+	--primary-category-text-color: #ffffff;
 	--primary-codeblock-border-color: #30336b;
 	--primary-codeblock-background-color: #0e0826;
 	--primary-table-nth-child-even-color: #140f2b;
@@ -79,7 +79,7 @@ body.light {
   --secondary-text-color: #ffffff;
   --primary-link-color: #686de0;
   --primary-link-color-hover: #a3a6ff;
-	--primary-tag-text-color: #ffffff;
+	--primary-category-text-color: #ffffff;
 	--primary-codeblock-border-color: #404040;
 	--primary-codeblock-background-color: #212121;
 	--primary-table-nth-child-even-color: #140f2b;

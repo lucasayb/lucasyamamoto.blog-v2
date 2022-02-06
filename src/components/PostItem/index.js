@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import * as S from './styled'
 
+import Category from '../Category';
+
 import getThemeColor from '../../utils/getThemeColor';
 
 const PostItem = ({ slug, thumbnail, color, date, category, title, description }) => {
@@ -9,7 +11,7 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
     <S.PostItemWrapper>
       <S.PostItemInfo>
         <S.PostItemDate>{date}</S.PostItemDate>
-        <S.PostItemTag color={color}>{category}</S.PostItemTag>
+        <Category color={color} category={category} />
       </S.PostItemInfo>
       <S.PostItemLink 
         duration={0.6}

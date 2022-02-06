@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 
 import Layout from "../components/Layout";
+import Category from "../components/Category";
 import Comments from "../components/Comments";
 import Seo from "../components/Seo";
 import * as S from '../components/Post/styled';
@@ -24,7 +25,7 @@ const BlogPost = ({ data }) => {
         </S.PostSocial9Wrapper>
         <S.PostHeader>
           <S.PostDate>{frontmatter.date}</S.PostDate>
-          <S.PostTag color={frontmatter.color}>{frontmatter.category}</S.PostTag>
+          <Category color={frontmatter.color} category={frontmatter.category} />
         </S.PostHeader>
         
 

@@ -22,21 +22,6 @@ export const PostHeader = styled.section`
   padding: 10px 0;
 `
 
-export const PostTag = styled.section`
-  align-items: center;
-  background-color: ${(props) => props.color};
-	transition: background-color var(--transition-time);
-  color: var(--primary-tag-text-color);
-  display: flex;
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  height: 25px; 
-  padding: 0 15px;
-  font-weight: 100;
-  text-decoration: none;
-`
-
 export const PostDate = styled.time`
   color: var(--primary-text-color);
   font-size: 0.875rem;
@@ -179,7 +164,7 @@ export const PostBody = styled.section`
     font-size: 0.9375em;
     border: 1px solid var(--primary-codeblock-border-color);
     color: var(--secondary-text-color);
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: var(--primary-codeblock-background-color);
     transition: background-color var(--transition-time);
   }
