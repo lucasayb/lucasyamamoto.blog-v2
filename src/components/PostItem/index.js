@@ -15,8 +15,7 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
       </S.PostItemInfo>
       <S.PostItemLink 
         duration={0.6}
-        cover
-        direction="left"
+        fade
         bg={getThemeColor()}
         to={slug} 
         title={`Ir para o post ${title}`}

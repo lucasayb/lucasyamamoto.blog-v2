@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Img from "gatsby-image"
-
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 export const PostWrapper = styled.section`
   padding: 15px;
 `
@@ -210,5 +210,37 @@ export const PostBody = styled.section`
   }
   iframe {
     margin: 10px 0;
+  }
+`
+
+export const NavLinksWrapper = styled.section`
+  align-items: center;
+  background-color: var(--primary-background-color);
+  transition: background-color var(--transition-time);
+  border-top: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  display: flex;
+  justify-content: space-between;
+`
+
+export const NavLink = styled(AniLink)`
+  color: var(--primary-text-color);
+  display: flex;
+  text-decoration: none;
+  padding: 10px 30px;
+  width: 50%;
+
+  &.previous {
+    border-right: 1px solid var(--primary-border-color);
+    &:before {
+      content: "\\2190";
+      margin-right: 0.5rem;
+    }
+  }
+  &.next {
+    &:after {
+      content: "\\2192";
+      margin-left: 0.5rem;
+    }
   }
 `
