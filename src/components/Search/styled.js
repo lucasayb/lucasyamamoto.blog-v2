@@ -49,7 +49,7 @@ export const SearchBoxWrapper = styled.section`
   }
   .ais-SearchBox-input {
     background-color: var(--primary-background-color);
-	  transition: background-color var(--transition-time);
+	  transition: background-color var(--transition-time), color var(--transition-time);
     border: none;
     border-bottom: 1px solid var(--primary-border-color);
     font-size: 1.125rem;

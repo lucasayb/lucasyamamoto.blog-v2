@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeaderWrapper = styled.header`
   align-items: center;
   background-color: var(--primary-background-color);
-	transition: background-color var(--transition-time);
+	transition: background-color var(--transition-time), color var(--transition-time);
   border-bottom: 1px solid var(--primary-border-color);
   display: flex;
   justify-content: space-between;

@@ -9,7 +9,7 @@ export const CommentsWrapper = styled.section`
 export const CommentsBody = styled.section`
   background-color: #0a061c;
   border-radius: 10px;
-	transition: background-color var(--transition-time);
+	transition: background-color var(--transition-time), color var(--transition-time);
   color: var(--primary-text-color) !important;
   padding: 15px;
   iframe[src*="ads-iframe"] {

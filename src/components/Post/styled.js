@@ -76,7 +76,7 @@ export const PostBody = styled.section`
 
   table tr:nth-child(even) {
     background-color: var(--primary-table-nth-child-even-color);
-	  transition: background-color var(--transition-time);
+	  transition: background-color var(--transition-time), color var(--transition-time);
   }
 
   table th,
@@ -86,7 +86,7 @@ export const PostBody = styled.section`
 
   table th {
     background-color: var(--primary-table-nth-child-even-color);
-    transition: background-color var(--transition-time);
+    transition: background-color var(--transition-time), color var(--transition-time);
     border: 1px solid var(--primary-table-border-color);
   }
 
@@ -166,7 +166,7 @@ export const PostBody = styled.section`
     color: var(--secondary-text-color);
     border-radius: 10px;
     background-color: var(--primary-codeblock-background-color);
-    transition: background-color var(--transition-time);
+    transition: background-color var(--transition-time), color var(--transition-time);
   }
 
   code {

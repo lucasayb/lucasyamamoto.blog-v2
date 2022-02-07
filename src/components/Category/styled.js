@@ -4,7 +4,7 @@ export const Category = styled.section`
   align-items: center;
   background-color: ${(props) => props.color};
   border-radius: 5px;
-  transition: background-color var(--transition-time);
+  transition: background-color var(--transition-time), color var(--transition-time);
   color: var(--primary-category-text-color);
   display: flex;
   font-size: 1rem;

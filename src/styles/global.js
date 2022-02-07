@@ -93,8 +93,6 @@ body.light {
 		color: white !important;
 	}
 body {
-	background-color: var(--primary-background-color);
-	transition: background-color var(--transition-time);
   font: 400 18px/1.5 'Roboto', sans-serif;
   color: var(--primary-text-color);
   -webkit-text-size-adjust: 100%;
@@ -109,6 +107,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
+	background-color: var(--primary-background-color);
+	transition: background-color var(--transition-time), color var(--transition-time);
 }
 a {
   color: var(--primary-link-color);

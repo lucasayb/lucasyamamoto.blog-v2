@@ -32,7 +32,7 @@ export const MenuContextWrapper = styled.div`
 export const MenuBurgerWrapper = styled.button`
   align-items: center;
   background-color: var(--primary-background-color);
-	transition: background-color var(--transition-time);
+	transition: background-color var(--transition-time), color var(--transition-time);
   cursor: pointer;
   display: flex;
   width: 38px;
