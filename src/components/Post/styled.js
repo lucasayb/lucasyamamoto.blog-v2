@@ -8,9 +8,9 @@ export const PostWrapper = styled.section`
 export const PostSocial9Wrapper = styled.section`
   padding: 15px 0;
   .s9-btn-share {
-    transition: opacity var(--transition-time);
+    transition: filter var(--transition-time);
     &:hover {
-      opacity: 0.5;
+      filter: brightness(1.5)
     }
   }
 `
