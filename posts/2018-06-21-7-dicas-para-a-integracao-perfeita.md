@@ -13,7 +13,7 @@ Nowadays, many companies that make their own website to enter the web decide not
 
 ## 1. Test the initial application data
 
-Antes de iniciar qualquer parte do projeto, faça testes. Ferramentas como Postman servem justamente para isso. Faça todas as requisições possíveis. Isso é feito para que possamos descobrir como os dados chegarão para nossa micro aplicação desenvolvida. Acredite, cada teste de requisição poderá ser responsável por mudar totalmente o direcionamento da integração que está sendo desenvolvida, e também nos ajuda a identificar erros que podem não ser de nosso software.
+Before starting any part of the project, do tests. Tools like Postman are just for that. Make all requests possible. This is done so that we can find out how the data will arrive for our developed micro application. Believe me, each test request can be responsible for completely changing the direction of the integration that is being developed, and also helps us to identify errors that may not be in our software.
 
 ## 2. Test target application data
 
@@ -39,6 +39,6 @@ At this point you must decide where to end the data coming from the home system.
 
 Despite the name of the article talking about seamless integration, this is unfortunately a myth. Every application is subject to exceptions. The developer's role in the planning process to the effective completion of any type of system is, in addition to building it, to find as many exceptions as possible. However, the biggest difficulty in this process is that we do not have control over all possibilities of reaction of a software.
 
-\* For this, there are several frameworks or robots developed to find a large number of possible exceptions that prevent the proper functioning of the software.
+For this, there are several frameworks or robots developed to find a large number of possible exceptions that prevent the proper functioning of the software.
 
 Finally, the perfect integration is the one that works and has the objective achieved. As much as your client is a large company, developing systems integration should not be a huge task. It can be complicated, with ups and downs and at worst a functional integration, but with great difficulties for maintenance. However, always seek to reach your final objective and never lose transparency in front of the client.
