@@ -1,44 +1,44 @@
 ---
-title: 7 tips for the perfect integration
+title: 7 dicas para desenvolver a integração perfeita
 date: 2018-06-21 18:55:41 -0300
-description: Nowadays, many companies that make their own website to enter the
-  web decide not to give up their ERP.
+description: Hoje em dia, muitas empresas que fazem o próprio site para se
+  inserir na web decidem não renunciar ao seu ERP.
 thumbnail: /assets/uploads/integracoes.jpg
 category: Dicas
 color: "#1abc9c"
 redirect_from:
   - /dicas/2018/06/21/7-dicas-para-a-integracao-perfeita.html
 ---
-Nowadays, many companies that make their own website to enter the web decide not to give up their ERP. For cases like this, it is necessary to develop an integration, a micro application with the responsibility of allowing the web system to "talk" with the company's own application. In our trajectory at Codeby, we managed to get many mistakes and successes, and we came to bring them here to show you, possibly, the “formula” of integration. Check out!
+Hoje em dia, muitas empresas que fazem o próprio site para se inserir na web decidem não renunciar ao seu ERP. Para casos como esse, é necessário desenvolver uma integração, micro-aplicação com a responsabilidade de permitir que o sistema web consiga “conversar” com a aplicação própria da empresa. Na nossa trajetória na Codeby, conseguimos obter muitos erros e acertos, e viemos trazê-los aqui para mostrar a vocês, possivelmente, a “fórmula” da integração. Confira!
 
-## 1. Test the initial application data
+## 1. Teste Os Dados Da Aplicação Inicial
 
-Before starting any part of the project, do tests. Tools like Postman are just for that. Make all requests possible. This is done so that we can find out how the data will arrive for our developed micro application. Believe me, each test request can be responsible for completely changing the direction of the integration that is being developed, and also helps us to identify errors that may not be in our software.
+Antes de iniciar qualquer parte do projeto, faça testes. Ferramentas como Postman servem justamente para isso. Faça todas as requisições possíveis. Isso é feito para que possamos descobrir como os dados chegarão para nossa micro aplicação desenvolvida. Acredite, cada teste de requisição poderá ser responsável por mudar totalmente o direcionamento da integração que está sendo desenvolvida, e também nos ajuda a identificar erros que podem não ser de nosso software.
 
-## 2. Test target application data
+## 2. Teste Os Dados Da Aplicação De Destino
 
-The idea is to check how the information should be sent to the final system. This helps us to study what transformations will be necessary in the data of the initial system so that it fits its destiny.
+A ideia é verificar como as informações devem ser enviados para o sistema final. Isso nos ajuda a estudar quais transformações serão necessárias nos dados do sistema inicial para que ele se adéque ao seu destino.
 
-## 3. Planning is essential
+## 3. O Planejamento É Essencial
 
-After testing, it's time to get your hands dirty. As obvious as this may seem, this is where the development of integration can be compromised. There are situations where both the initial system and the target software have flaws. And it is in these cases that the planning of the micro application must consider both ends of the communication and be impeccable. A bad projection leads to a longer process in the development of the integration and constant corrections that could have been avoided in this step. Make flowcharts, chat with the customer, don't worry about wasting time here. The more time lost in preparing your software, the more time you will gain in development itself and the more mature it will become. Excellent tools such as Draw.io are there to help you, however, although the programmer works daily with a computer, he should never get rid of pen and paper.
+Após os testes, está na hora de botar a mão na massa. Por mais óbvio que isso possa parecer, é nesse ponto que o desenvolvimento da integração pode ficar comprometido. Existem situações em que tanto o sistema inicial, quanto o software de destino possuem falhas. E são nesses casos que o planejamento da micro-aplicação deve considerar ambas as pontas da comunicação e ser impecável. Uma projeção ruim acarreta um processo mais longo no desenvolvimento da integração e em correções constantes que poderiam ter sido evitadas nesse passo. Faça fluxogramas, converse com o cliente, não se preocupe em perder tempo aqui. Quanto mais tempo perdido na preparação de seu software, mais tempo se ganhará no desenvolvimento propriamente dito e mais maduro ele se tornará. Ferramentas excelentes como, por exemplo, o Draw.io estão aí para te ajudar, porém, apesar do programador trabalhar diariamente com computador, ele nunca deverá se livrar do papel e caneta.
 
-## 4. Focus on the functional
+## 4. Foque No Funcional
 
-The task must be simple and straightforward: to integrate. Any features such as administrative panels for viewing information from this communication should come as an add-on. This is a feature in the project that, as cool and important as it is, is not essential for the basic functioning of the proposal. Of course, the client may demand something like that, but never waste time on a task that can be done in a short time when the core is not finished yet.
+A tarefa deve ser simples e direta: integrar. Quaisquer recursos como painéis administrativos para visualização das informações dessa comunicação deve vir como adicional. Esse é um tipo funcionalidade no projeto que, por mais legal e importante que ela seja, não é essencial para o funcionamento básico da proposta. É claro que o cliente pode vir a exigir algo do tipo, mas jamais perca tempo em uma tarefa que pode ser feita em pouco tempo quando ainda não se tem o núcleo finalizado.
 
-## 5. Research, and a lot!
+## 5. Pesquise, E Muito!
 
-It is possible and likely that one of the tools you are wasting more than 6 hours a day to develop has already been published on the internet. The developer community on the Web is huge, and there are many existing libraries to meet different needs. Don't reinvent the wheel, this could be a shot in the foot for both you and the customer.
+É possível e provável que uma das ferramentas na qual você está perdendo mais de 6 horas por dia para desenvolver já tenha sido publicada na internet. A comunidade de desenvolvedores na Web é muito grande, e existem muitas bibliotecas existentes para suprir diversas necessidades. Não reinvente a roda, isso pode ser um tiro no pé tanto no seu quanto no do cliente.
 
-## 6. Will the data be merged?
+## 6. Os Dados Serão Mesclados?
 
-At this point you must decide where to end the data coming from the home system. Should they be merged into the final system? Should they simply be stored but separated with some specific attribute? This step does not depend only on the developer. The destination of the data must be studied together with the client, raising the pros and cons of each possibility.
+Nesse ponto você deverá decidir qual será o fim dos dados provenientes do sistema inicial. Eles deverão ser unidos ao sistema final? Deverão ser simplesmente armazenados, mas separados com algum atributo específico? Esse momento não depende apenas do desenvolvedor. O destino dos dados deve ser estudado com o cliente, levantando os prós e contras de cada possibilidade.
 
-## 7. Integration will never be perfect
+## 7. A Integração Nunca Estará Perfeita
 
-Despite the name of the article talking about seamless integration, this is unfortunately a myth. Every application is subject to exceptions. The developer's role in the planning process to the effective completion of any type of system is, in addition to building it, to find as many exceptions as possible. However, the biggest difficulty in this process is that we do not have control over all possibilities of reaction of a software.
+Apesar de o nome do artigo falar sobre a integração perfeita, isso infelizmente é um mito. Toda aplicação está sujeita a exceções. O papel do desenvolvedor no processo de planejamento até a conclusão efetiva de qualquer sistema é, além de construí-lo, encontrar o máximo de exceções possíveis. Porém, a maior dificuldade nesse processo é que não temos controle sobre todas as possibilidades de reação de um software.
 
-For this, there are several frameworks or robots developed to find a large number of possible exceptions that prevent the proper functioning of the software.
+- Para isso, existem diversos frameworks ou robôs desenvolvidos para encontrar uma grande quantidade de possíveis exceções que impeçam o funcionamento adequado do software.
 
-Finally, the perfect integration is the one that works and has the objective achieved. As much as your client is a large company, developing systems integration should not be a huge task. It can be complicated, with ups and downs and at worst a functional integration, but with great difficulties for maintenance. However, always seek to reach your final objective and never lose transparency in front of the client.
+Por fim, a integração perfeita é aquela que funciona e que possui o objetivo atingido. Por mais que seu cliente seja uma empresa de grande porte, desenvolver uma integração de sistemas não deve ser uma tarefa gigante. Pode ser complicada, ter altos e baixos e na pior das hipóteses uma integração funcional, porém com grandes dificuldades para uma manutenção. Porém, busque sempre atingir seu objetivo final e jamais perca a transparência diante do cliente.
