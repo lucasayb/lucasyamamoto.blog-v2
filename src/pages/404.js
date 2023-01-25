@@ -9,24 +9,24 @@ import getThemeColor from '../utils/getThemeColor';
 
 const NotFoundPage = () => (
   <Layout>
-    <Seo title="404: Desculpa :( Página não encontrada" />
+    <Seo title="404: Sorry :( Page not found" />
     <S.NotFoundWrapper>
       <S.SorryGifWrapper>
         <img src={sorryGIF} alt="Joey saying sorry" />
       </S.SorryGifWrapper>
       <S.TitleNotFound>404</S.TitleNotFound>
-      <S.SubTitleNotFound>Desculpa :( Página não encontrada</S.SubTitleNotFound>
-      <S.TextNotFound>A página que você buscou não pôde ser encontrada. Utilize minha excelente busca da Algolia pra encontrar o que você deseja clicando {" "}
+      <S.SubTitleNotFound>Sorry :( Page not found</S.SubTitleNotFound>
+      <S.TextNotFound>The page you are looking for is nowhere to be found. Search to find what you want by clicking
         <AniLink 
           to="/search" 
-          title="Ir para a busca" 
+          title="Go to search page" 
           duration={0.6}
           cover
           direction="top"
           bg={getThemeColor()}
         >
-          aqui
-        </AniLink>
+          here
+        </AniLink>.
       </S.TextNotFound>
     </S.NotFoundWrapper>
   </Layout>

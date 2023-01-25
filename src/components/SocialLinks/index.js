@@ -17,7 +17,7 @@ const SocialLinks = () => {
             title={socialLink.name}
             href={socialLink.link}
             key={key}
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             <S.SocialLinkItemIconWrapper><Icon /></S.SocialLinkItemIconWrapper>
           </S.SocialLinkItem>

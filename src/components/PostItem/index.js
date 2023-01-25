@@ -18,7 +18,7 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
         fade
         bg={getThemeColor()}
         to={slug} 
-        title={`Ir para o post ${title}`}
+        title={`Go to post ${title}`}
       >
         <S.PostItemTitle>{title}</S.PostItemTitle>
       </S.PostItemLink>
@@ -29,7 +29,7 @@ const PostItem = ({ slug, thumbnail, color, date, category, title, description }
         direction="left"
         bg={getThemeColor()}
         to={slug} 
-        title={`Ir para o post ${title}`}
+        title={`Go to post ${title}`}
       >
         {thumbnail ? <S.PostItemThumbnail fluid={thumbnail.childImageSharp.fluid} /> : <></>}
       </S.PostItemLink>

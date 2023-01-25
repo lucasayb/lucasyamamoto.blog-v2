@@ -50,7 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
             category
             title
             description
-            date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
+            date(formatString: "MMMM DD[,] YYYY", locale: "en-US")
             color
           }
           fields {

@@ -12,15 +12,15 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
         cover
         direction="right"
         bg={getThemeColor()}
-      ><S.ArrowLeftIcon /> Página anterior</S.PaginationLink>)}
-    <p>{currentPage} de {numPages}</p>
+      ><S.ArrowLeftIcon /> Previous page</S.PaginationLink>)}
+    <p>{currentPage} of {numPages}</p>
     {!isLast && (
       <S.PaginationLink 
         to={nextPage}
         duration={0.6}
         cover
         direction="left"
-      >Página seguinte <S.ArrowRightIcon /></S.PaginationLink>)}
+      >Next page <S.ArrowRightIcon /></S.PaginationLink>)}
   </S.PaginationWrapper>
 )
 

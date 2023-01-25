@@ -4,7 +4,7 @@ date: 2022-02-04 10:35:19
 description: Vou descrever um pouco da minha jornada e os motivos da migração de
   tecnologias entre um blog Jekyll para Gatsby
 thumbnail: /assets/uploads/gatsby-thumbnail.png
-category: Experiência
+category: Experience
 color: "#341f97"
 redirect_from: []
 ---

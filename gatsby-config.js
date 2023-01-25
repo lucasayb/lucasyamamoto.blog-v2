@@ -5,8 +5,8 @@ const queries = require('./src/utils/algoliaQueries')
 module.exports = {
   siteMetadata: {
     title: `Lucas Yamamoto`,
-    position: `CTO na Codeby`,
-    description: `Sou um desenvolvedor Web e CTO da CodeBy. Busco estar por dentro das tecnologias no mercado de e-commerce e programação no geral, sempre focando em me renovar e buscar por soluções úteis e práticas para mim e para as empresas para as quais prestamos serviços.`,
+    position: `CTO at Codeby`,
+    description: `I'm a web developer and CTO at CodeBy. I seek to be on top of technologies in the e-commerce market and programming in general, always focusing on renewing myself and looking for valuable and practical solutions for myself and the companies we provide.`,
     author: `@lucasayb`,
     siteUrl: `https://www.lucasyamamoto.com`,
   },

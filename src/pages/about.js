@@ -7,18 +7,18 @@ import SocialLinks from '../components/SocialLinks'
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="Sobre" />
+    <Seo title="About" />
     <S.PostWrapper>
-      <S.PostTitle>Sobre mim</S.PostTitle>
+      <S.PostTitle>About me</S.PostTitle>
       <S.PostBody>
-        <p>Aos 12 anos desenvolvi meu primeiro site, usando bloco de notas e buscando novos conhecimentos em HTML, CSS e PHP para fazer sistemas dinâmicos e robustos.</p>
-        <p>Aos 19, entrei na Codeby, quando era uma pequena empresa com apenas 9 pessoas, em um co-working que só deveríamos ir em dias pré-selecionados.</p>
-        <p>No mesmo ano, tive a oportunidade de participar do projeto do Pizzahut e do KFC México, no qual pude colocar em prática meus conhecimentos de inglês e programação, sendo responsável pelo desenvolvimento de uma integração com o objetivo de enviar cerca de 1 pedido por segundo, colocado em e-commerce, para a loja previamente selecionada pelo cliente.</p>
-        <p>Em 2019, fiz um treinamento presencial para a equipe da Motorola na Índia e, paralelamente, desenvolvi o e-commerce da Motorola nos EUA usando React e Node.</p>
-        <p>Em 2020, desenvolvi um sistema integrador para ambientes VTEX utilizando Python, responsável por migrar centenas de milhares de produtos e outros dados de 6 shoppings diferentes para o ambiente atual da ONStores.</p>
-        <p>Em 2021, fui um dos responsáveis ​​por triplicar a receita da Codeby, além de ajudá-la a crescer mais de 200% no mesmo ano, sendo hoje o atual líder da equipe de operações e desenvolvimento da Codeby, responsável pela gestão de uma equipe de mais de 60 pessoas.</p>
-        <p>A cada dia procuro me especializar com livros voltados para gestão e tecnologia, além de participar de eventos com o objetivo de me atualizar e descobrir novos caminhos a serem seguidos.</p>
-        <h2>Contate-me em minhas redes sociais</h2>
+        <p>At age 12, I developed my first website, using notepad and seeking new knowledge in HTML, CSS and PHP to make dynamic and robust systems.</p>
+        <p>At 19, I joined Codeby, when it was a small company with only 9 people, in a co-working that we should only go on pre-selected days.</p>
+        <p>In the same year, I had the opportunity to participate in the Pizzahut and KFC Mexico project, in which I was able to put my knowledge of English and programming into practice, being responsible for the development of an integration with the objective of sending about 1 order per second, placed in e-commerce, for the store previously selected by the customer.</p>
+        <p>In 2019, I did a face-to-face training for the Motorola team in India and, in parallel, I developed Motorola US e-commerce using React and Node.</p>
+        <p>In 2020, I developed an integrator system for VTEX environments using Python, responsible for migrating hundreds of thousands of products and other data from 6 different malls to the current ONStores environment.</p>
+        <p>In 2021, I was one of those responsible for tripling Codeby's revenue, in addition to helping it grow more than 200% in the same year, being today the current leader of Codeby's operations and development team, responsible for managing a team of more of 60 people.</p>
+        <p>Every day, I try to get specialized with books focused on management and technology, in addition to participating in events with the aim of updating myself and discovering new paths to be followed.</p>
+        <h2>Contact me on my social networks</h2>
         <SocialLinks />
       </S.PostBody>
     </S.PostWrapper>
