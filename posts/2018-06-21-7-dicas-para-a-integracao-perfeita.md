@@ -4,7 +4,7 @@ date: 2018-06-21 18:55:41 -0300
 description: Hoje em dia, muitas empresas que fazem o próprio site para se
   inserir na web decidem não renunciar ao seu ERP.
 thumbnail: /assets/uploads/integracoes.jpg
-category: Dicas
+category: Tips
 color: "#1abc9c"
 redirect_from:
   - /dicas/2018/06/21/7-dicas-para-a-integracao-perfeita.html

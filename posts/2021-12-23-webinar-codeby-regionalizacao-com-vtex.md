@@ -2,7 +2,7 @@
 title: "Webinar Codeby: Regionalização com VTEX"
 date: 2021-12-23 10:12:30 -0300
 thumbnail: /assets/uploads/screen-shot-2022-02-03-at-03.49.44.png
-category: Vídeos
+category: Videos
 color: "#3498db"
 redirect_from:
   - /videos/2021/12/23/webinar-codeby-regionalizacao-com-vtex.html

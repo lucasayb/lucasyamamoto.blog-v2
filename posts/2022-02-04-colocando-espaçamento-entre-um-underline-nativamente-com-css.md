@@ -2,7 +2,7 @@
 title: Colocando espaçamento entre um underline nativamente com CSS
 date: 2022-02-11 12:00:00
 thumbnail: /assets/uploads/text-underline-offset.png
-category: Desenvolvimento
+category: Development
 color: "#e74c3c"
 description: E não, não é com border-bottom
 ---

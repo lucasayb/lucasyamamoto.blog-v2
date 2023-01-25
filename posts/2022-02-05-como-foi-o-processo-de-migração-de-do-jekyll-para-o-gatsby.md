@@ -38,7 +38,7 @@ Ao longo do desenvolvimento, algumas coisas mudaram, como algumas cores e alguns
 
 A ideia aqui foi deixar parecido com o tema Minima do Jekyll, mudando coisas bem pontuais como as categorias coloridas, a busca, o menu e o dark mode (que não está no design).
 
-## Desenvolvimento
+## Development
 
 Para desenvolver o blog, assisti um curso muito bom do [Willian Justen](https://willianjusten.com.br/), que é o [“Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS"](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/).
 
@@ -88,7 +88,7 @@ redirect_from:
   - /dicas/2018/06/21/7-dicas-para-a-integracao-perfeita.html
 title: "7 dicas para a integração perfeita"
 date: 2018-06-21 18:55:41 -0300
-category: Dicas
+category: Tips
 thumbnail: /assets/uploads/integracoes.jpg
 description: Hoje em dia, muitas empresas que fazem o próprio site para se inserir na web decidem não abrir mão de seu ERP.
 color: "#1abc9c"

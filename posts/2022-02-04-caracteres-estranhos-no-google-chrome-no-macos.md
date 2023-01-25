@@ -4,7 +4,7 @@ date: 2022-02-03 11:16:51
 description: Caracteres estranhos no Google Chrome no MacOS apareceram do nada e
   aqui está o motivo
 thumbnail: /assets/uploads/chrome-bizarre-thumbnail.png
-category: Dicas
+category: Tips
 color: "#1abc9c"
 ---
 Estava eu contente escrevendo meu artigo sobre o desenvolvimento desse novo blog (em breve postarei-o aqui) quando me deparei com uns caracteres estranhos no Google Chrome sem a menor explicação.

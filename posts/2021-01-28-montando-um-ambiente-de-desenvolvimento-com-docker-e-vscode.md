@@ -3,7 +3,7 @@ redirect_from:
   - /desenvolvimento/2021/01/22/montando-um-ambiente-de-desenvolvimento-com-docker-e-vscode.html
 title: "Montando um ambiente de desenvolvimento com Docker e VSCode"
 date: 2021-01-22 17:44:02 -0300
-category: Desenvolvimento
+category: Development
 thumbnail: /assets/uploads/2021-01-28-montando-um-ambiente-de-desenvolvimento-com-docker-thumbnail.jpg
 description: Recentemente na CodeBy migramos nossos apps e deployments da Digital Ocean para a AWS e com isso pudemos usufruir de toda a gama de serviços que a Amazon Web Services possui.
 color: "#e74c3c"

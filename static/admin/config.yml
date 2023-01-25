@@ -31,13 +31,13 @@ collections:
           widget: "select",
           options:
             [
-              "Desenvolvimento",
+              "Development",
               "DevOps",
-              "Dicas",
+              "Tips",
               "Experiência",
               "Gestão de Projetos",
               "Vida",
-              "Vídeos",
+              "Videos",
             ],
         }
       - {
@@ -46,13 +46,13 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Desenvolvimento", value: "#e74c3c" },
+              { label: "Development", value: "#e74c3c" },
               { label: "DevOps", value: "#9b59b6" },
-              { label: "Dicas", value: "#1abc9c" },
+              { label: "Tips", value: "#1abc9c" },
               { label: "Experiência", value: "#341f97" },
               { label: "Gestão de Projetos", value: "#B53471" },
               { label: "Vida", value: "#6ab04c" },
-              { label: "Vídeos", value: "#3498db" },
+              { label: "Videos", value: "#3498db" },
             ],
         }
       - { label: "Body", name: "body", widget: "markdown" }

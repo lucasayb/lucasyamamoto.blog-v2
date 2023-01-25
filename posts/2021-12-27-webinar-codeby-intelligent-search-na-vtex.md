@@ -2,7 +2,7 @@
 title: "Webinar Codeby: Intelligent Search na VTEX"
 date: 2021-12-27 14:30:10 -0300
 thumbnail: /assets/uploads/screen-shot-2022-02-03-at-03.49.11.png
-category: Vídeos
+category: Videos
 color: "#3498db"
 redirect_from:
   - /videos/2021/12/27/webinar-codeby-intelligent-search-na-vtex.html
