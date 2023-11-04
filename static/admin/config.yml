@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: lucasayb/lucasyamamoto.blog-v2
+  repo: lucasayb/lucasyamamoto.gatsbyjs
   branch: main
   site_domain: lucasyamamoto.netlify.com
 
