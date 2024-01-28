@@ -22,12 +22,29 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
   {
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+    categories: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(categories)/.*\.md$/"}}
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          name
+          date
+          color
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      sort: {order: DESC, fields: frontmatter___date}
+      filter: {fileAbsolutePath: {regex: "/(posts)/.*\.md$/"}}
+    ) {
       edges {
         next {
           fields {
@@ -60,17 +77,23 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  }`).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
+  }`).then(async (result) => {
+    const data = result.data
+    const categories = data.categories.nodes
+    const posts = data.posts.edges
 
     posts.forEach(({ node, previous, next }) => {
+      const category = categories.find(category => {
+        return category.frontmatter.name === node.frontmatter.category
+      })
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/templates/blog-post.js'),
-        context: { 
+        context: {
+          category,
           slug: node.fields.slug,
           previousPost: next,
-          nextPost: previous 
+          nextPost: previous
         }
       })
     })
@@ -83,6 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: index === 0 ? `/` : `/page/${index + 1}`,
         component: path.resolve('./src/templates/blog-list.js'),
         context: {
+          allCategories: categories,
           limit: postsPerPage,
           skip: index * postsPerPage,
           numPages,

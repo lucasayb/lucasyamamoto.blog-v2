@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 
+
 import Layout from "../components/Layout";
 import Category from "../components/Category";
 import Comments from "../components/Comments";
@@ -11,7 +12,7 @@ import getThemeColor from '../utils/getThemeColor';
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark } = data;
   const { frontmatter, fields, html } = markdownRemark;
-  const { nextPost, previousPost, category } = pageContext;
+  const { nextPost, previousPost } = pageContext;
   return (
     <Layout>
       <Seo
@@ -26,7 +27,7 @@ const BlogPost = ({ data, pageContext }) => {
         </S.PostSocial9Wrapper>
         <S.PostHeader>
           <S.PostDate>{frontmatter.date}</S.PostDate>
-          <Category color={category.frontmatter.color} category={category.frontmatter.name} />
+          <Category color={frontmatter.color} category={frontmatter.category} />
         </S.PostHeader>
 
 
