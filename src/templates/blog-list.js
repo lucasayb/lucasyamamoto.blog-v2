@@ -10,7 +10,25 @@ import Pagination from '../components/Pagination';
 const BlogList = ({ data, ...props }) => {
   const postList = data.allMarkdownRemark.edges;
 
-  const { currentPage, numPages } = props.pageContext;
+  const { allCategories, currentPage, numPages } = props.pageContext;
+  
+  const findCategory = (categoryName) => {
+    try {
+      const foundCategory = allCategories.find(category => {
+        return category.frontmatter.name === categoryName
+      })
+      if (!foundCategory) {
+        throw new Error(`Category ${categoryName} not found`)
+      }
+      return foundCategory
+    } catch (error) {
+      return {
+        frontmatter: {
+          
+        }
+      }
+    }
+  }
 
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
@@ -44,8 +62,7 @@ const BlogList = ({ data, ...props }) => {
           date={date}
           title={title}
           thumbnail={thumbnail}
-          category={category}
-          color={color}
+          category={findCategory(category)}
           slug={slug}
           description={description}
         />
@@ -65,6 +82,7 @@ const BlogList = ({ data, ...props }) => {
 export const query = graphql`
   query PostList($limit: Int!, $skip: Int!) {
     allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(posts)/.*\\.md$/"}}
       sort: {order: DESC, fields: frontmatter___date},
       limit: $limit,
       skip: $skip

@@ -6,12 +6,12 @@ import Category from '../Category';
 
 import getThemeColor from '../../utils/getThemeColor';
 
-const PostItem = ({ slug, thumbnail, color, date, category, title, description }) => {
+const PostItem = ({ slug, thumbnail, date, category, title, description }) => {
   return (
     <S.PostItemWrapper>
       <S.PostItemInfo>
         <S.PostItemDate>{date}</S.PostItemDate>
-        <Category color={color} category={category} />
+        <Category color={category.frontmatter.color} category={category.frontmatter.name} />
       </S.PostItemInfo>
       <S.PostItemLink 
         duration={0.6}
@@ -40,8 +40,7 @@ PostItem.propTypes = {
   thumbnail: PropTypes.object,
   date: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  category: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }

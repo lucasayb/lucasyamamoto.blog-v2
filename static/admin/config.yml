@@ -4,8 +4,6 @@ backend:
   branch: main
   site_domain: lucasyamamoto.netlify.com
 
-publish_mode: editorial_workflow
-
 media_folder: "static/assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -25,35 +23,13 @@ collections:
         }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - {
-          label: "Category",
+      - { label: "Category",
           name: "category",
-          widget: "select",
-          options:
-            [
-              "Development",
-              "DevOps",
-              "Tips",
-              "Experience",
-              "Gestão de Projetos",
-              "Vida",
-              "Videos",
-            ],
-        }
-      - {
-          label: "Color",
-          name: "color",
-          widget: "select",
-          options:
-            [
-              { label: "Development", value: "#e74c3c" },
-              { label: "DevOps", value: "#9b59b6" },
-              { label: "Tips", value: "#1abc9c" },
-              { label: "Experience", value: "#341f97" },
-              { label: "Gestão de Projetos", value: "#B53471" },
-              { label: "Vida", value: "#6ab04c" },
-              { label: "Videos", value: "#3498db" },
-            ],
+          widget: "relation",
+          collection: "categories",
+          search_fields: ["name"],
+          value_field: "name",
+          display_fields: ["name"]
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Redirect from", name: "redirect_from", widget: "list" }
