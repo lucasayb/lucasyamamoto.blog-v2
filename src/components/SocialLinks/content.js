@@ -4,7 +4,7 @@ export const socialLinks = [
     name: 'Github'
   },
   {
-    link: 'https://instagram.com/lucasyamamoto1997',
+    link: 'https://instagram.com/lucasayb97',
     name: 'Instagram'
   },
   {
