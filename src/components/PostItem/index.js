@@ -11,7 +11,7 @@ const PostItem = ({ slug, thumbnail, date, category, title, description }) => {
     <S.PostItemWrapper>
       <S.PostItemInfo>
         <S.PostItemDate>{date}</S.PostItemDate>
-        <Category color={category.frontmatter.color} category={category.frontmatter.name} />
+        <Category color={category?.frontmatter?.color} category={category?.frontmatter?.name} />
       </S.PostItemInfo>
       <S.PostItemLink 
         duration={0.6}

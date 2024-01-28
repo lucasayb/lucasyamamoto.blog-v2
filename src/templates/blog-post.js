@@ -26,7 +26,10 @@ const BlogPost = ({ data, pageContext }) => {
         </S.PostSocial9Wrapper>
         <S.PostHeader>
           <S.PostDate>{frontmatter.date}</S.PostDate>
-          <Category color={category.frontmatter.color} category={category.frontmatter.name} />
+          {category?.frontmatter ?
+            <Category color={category.frontmatter.color} category={category.frontmatter.name} />
+            : <></>
+          }
         </S.PostHeader>
 
 

@@ -1,6 +1,7 @@
 const postsQuery = `{
   posts: allMarkdownRemark(
     sort: {order: DESC, fields: frontmatter___date}
+    filter: {fileAbsolutePath: {regex: "/(posts)/.*\\.md$/"}}
   ) {
     edges {
       node {
