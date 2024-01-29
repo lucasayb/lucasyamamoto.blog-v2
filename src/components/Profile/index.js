@@ -9,7 +9,6 @@ const Profile = () => {
     site: {
       siteMetadata: {
         title,
-        position,
       }
     }
   } = useStaticQuery(graphql`

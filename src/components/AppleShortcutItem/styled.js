@@ -1,4 +1,3 @@
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Img from "gatsby-image"
 import styled from 'styled-components'
 
