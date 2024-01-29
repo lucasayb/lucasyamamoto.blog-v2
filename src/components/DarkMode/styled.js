@@ -12,6 +12,9 @@ export const DarkModeWrapper = styled.button`
   height: 38px;
   justify-content: center;
   margin: 0 10px;
+  @media (min-width: 768px) {
+    order: 3;
+  }
 `
 
 export const DarkMode = styled(Lightbulb)`

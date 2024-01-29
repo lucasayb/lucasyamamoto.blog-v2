@@ -5,11 +5,13 @@ import Seo from "../components/Seo"
 import * as S from '../components/Post/styled'
 import SocialLinks from '../components/SocialLinks'
 
+const PAGE_TITLE = "About me"
+
 const AboutPage = () => (
   <Layout>
-    <Seo title="About" />
+    <Seo title={PAGE_TITLE} />
     <S.PostWrapper>
-      <S.PostTitle>About me</S.PostTitle>
+      <S.PostTitle>{PAGE_TITLE}</S.PostTitle>
       <S.PostBody>
         <p>At age 12, I developed my first website, using notepad and seeking new knowledge in HTML, CSS and PHP to make dynamic and robust systems.</p>
         <p>At 19, I joined Codeby, when it was a small company with only 9 people, in a co-working that we should only go on pre-selected days.</p>

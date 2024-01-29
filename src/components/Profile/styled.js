@@ -4,6 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 export const ProfileWrapper = styled.section`
   margin: 0 5px;
   flex-grow: 1;
+  order: 0;
 `
 
 export const ProfileLink = styled(AniLink)`
@@ -26,13 +27,7 @@ export const ProfileInfo = styled.section`
 
 export const ProfileAuthor = styled.h1`
   color: var(--primary-text-color);
-  font-size: 0.8125rem;
-  @media (min-width: 350px) {
-    font-size: 1rem;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 1.25rem;
-  }
+  font-size: 1.25rem;
   font-weight: 100 !important;
   text-decoration: none;
 `

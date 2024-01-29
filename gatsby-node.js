@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
   return graphql(`
   {
     categories: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(categories)/.*\.md$/"}}
+      filter: {fileAbsolutePath: {regex: "/(_categories)/.*\.md$/"}}
     ) {
       nodes {
         fields {
@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     posts: allMarkdownRemark(
       sort: {order: DESC, fields: frontmatter___date}
-      filter: {fileAbsolutePath: {regex: "/(posts)/.*\.md$/"}}
+      filter: {fileAbsolutePath: {regex: "/(_posts)/.*\.md$/"}}
     ) {
       edges {
         next {
@@ -101,6 +101,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
 
+    createPage({
+      path: '/apple-shortcuts',
+      component: path.resolve('./src/templates/apple-shortcuts.js'),
+    })
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
         path: index === 0 ? `/` : `/page/${index + 1}`,

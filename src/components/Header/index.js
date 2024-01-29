@@ -1,20 +1,26 @@
 import React from 'react';
 
 import * as S from './styled'
+import { Container } from '../Layout/styled'
 
 import Profile from '../Profile'
-import { MenuBurger } from '../Menu'
+import MainMenu from '../MainMenu';
+// import { MenuBurger } from '../Menu'
+
 import { SearchIcon } from '../Search'
 import DarkMode from '../DarkMode'
 
 const Header = () => {
-
   return (
     <S.HeaderWrapper>
-      <Profile />
-      <DarkMode />
-      <SearchIcon />
-      <MenuBurger />
+      <Container>
+        <S.HeaderContainer>
+          <Profile />
+          <MainMenu />
+          <SearchIcon />
+          <DarkMode />
+        </S.HeaderContainer>
+      </Container>
     </S.HeaderWrapper>
   )
 }

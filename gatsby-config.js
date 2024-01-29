@@ -36,14 +36,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/_posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `appleshortcuts`,
+        path: `${__dirname}/_appleshortcuts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `categories`,
-        path: `${__dirname}/categories`,
+        path: `${__dirname}/_categories`,
       },
     },
     {
@@ -57,7 +64,7 @@ module.exports = {
               staticFolderName: 'static',
               // [Optional] Include the following fields, use dot notation for nested fields
               // All fields are included by default
-              include: ['thumbnail'],
+              include: ['thumbnail', 'icon'],
               // [Optional] Exclude the following fields, use dot notation for nested fields
               // No fields are excluded by default
               exclude: ['redirect_from'],
