@@ -42,7 +42,7 @@ export const PostThumbnail = styled(Img)`
 
 export const PostTitle = styled.h1`
   color: var(--primary-text-color);
-  font-size: 2.625rem;
+  font-size: 1.825rem;
   @media screen and (min-width: 800px) {
     font-size: 2.625rem;
   }
