@@ -100,7 +100,7 @@ export const query = graphql`
             category
             title
             description
-            date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
+            date(formatString: "MMMM[, ] Do [of] YYYY", locale: "en-US")
             color
             thumbnail {
               childImageSharp {

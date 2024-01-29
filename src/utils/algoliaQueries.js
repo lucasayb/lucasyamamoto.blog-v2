@@ -12,7 +12,7 @@ const postsQuery = `{
           title
           description
           date_timestamp: date
-          date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
+          date(formatString: "MMMM[, ] Do [of] YYYY", locale: "en-US")
         }
         fields {
           slug

@@ -58,7 +58,7 @@ export const query = graphql`
           frontmatter {
             title
             description
-            date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
+            date(formatString: "MMMM[, ] Do [of] YYYY", locale: "en-US")
             link
             icon {
               childImageSharp {

@@ -89,7 +89,7 @@ export const query = graphql`
         description
         color
         category
-        date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-BR")
+        date(formatString: "MMMM[, ] Do [of] YYYY", locale: "en-US")
       }
       html
     }
