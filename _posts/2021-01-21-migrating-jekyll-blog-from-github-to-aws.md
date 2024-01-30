@@ -6,7 +6,7 @@ redirect_from:
 title: "Migrating Jekyll Blog from GitHub to AWS"
 date: 2021-01-21 15:53:42 -0300
 category: DevOps
-thumbnail: /assets/uploads/2021-01-21-migrating-blog-em-jekyll-do-github-para-aws-thumbnail.jpg
+thumbnail: /assets/uploads/2021-01-21-migrando-blog-em-jekyll-do-github-para-aws-thumbnail.jpg
 description: Recently at CodeBy, we migrated our apps and deployments from Digital Ocean to AWS, thus benefiting from the wide range of services that Amazon Web Services offers.
 color: "#9b59b6"
 ---
