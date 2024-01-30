@@ -16,7 +16,7 @@ const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey);
 export const SearchIcon = () => (
   <S.SearchIconWrapper 
     to="/search" 
-    title="Ir para a busca" 
+    title="Go to search" 
     duration={0.6}
     cover
     direction="top"
