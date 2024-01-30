@@ -93,7 +93,7 @@ body.light {
 		color: white !important;
 	}
 body {
-  font: 400 18px/1.5 'Roboto', sans-serif;
+  font: 400 18px/1.5 'Rajdhani', sans-serif;
   color: var(--primary-text-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;

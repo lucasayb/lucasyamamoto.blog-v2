@@ -8,6 +8,7 @@ export const PostItemWrapper = styled.section`
 export const PostItemTitle = styled.div`
   color: var(--primary-text-color);
   transition: color var(--transition-time);
+  font-weight: bold;
   font-size: 1.375rem;
   @media screen and (min-width: 800px) {
     font-size: 1.375rem;
@@ -22,6 +23,7 @@ export const PostItemDate = styled.time`
   color: var(--primary-text-color);
   font-size: 0.875rem;
   font-weight: 100;
+  text-transform: lowercase;
 `
 export const PostItemInfo = styled.div`
   align-items: center;

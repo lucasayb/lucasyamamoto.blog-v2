@@ -33,7 +33,7 @@ const Search = () => (
       <SearchBox autoFocus translations={{ placeholder: 'Search...' }} />
       <S.SearchInfo>
         <Stats translations={{stats(nbHits, timeSpentMs) {
-          return `${nbHits} resultados encontrados em ${timeSpentMs} ms`
+          return `${nbHits} results found in ${timeSpentMs} ms`
         }}} />
         <S.SearchAlgoliaIcon><AlgoliaIcon /></S.SearchAlgoliaIcon>
       </S.SearchInfo>

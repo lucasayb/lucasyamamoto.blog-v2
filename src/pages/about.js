@@ -11,7 +11,7 @@ const AboutPage = () => (
   <Layout>
     <Seo title={PAGE_TITLE} />
     <S.PostWrapper>
-      <S.PostTitle>{PAGE_TITLE}</S.PostTitle>
+      <S.PostTitle className="lower">{PAGE_TITLE}</S.PostTitle>
       <S.PostBody>
         <p>At age 12, I developed my first website, using notepad and seeking new knowledge in HTML, CSS and PHP to make dynamic and robust systems.</p>
         <p>At 19, I joined Codeby, when it was a small company with only 9 people, in a co-working that we should only go on pre-selected days.</p>

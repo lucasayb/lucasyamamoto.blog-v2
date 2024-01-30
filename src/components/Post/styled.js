@@ -48,6 +48,9 @@ export const PostTitle = styled.h1`
   }
   font-weight: 400;
   margin: 10px 0;
+  &.lower {
+    text-transform: lowercase;
+  }
 `
 
 export const PostBody = styled.section`
