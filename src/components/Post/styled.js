@@ -26,7 +26,7 @@ export const PostDate = styled.time`
   color: var(--primary-text-color);
   font-size: 0.875rem;
   font-weight: 100;
-  text-transform: uppercase;
+  text-transform: lowercase;
 `
 
 export const PostDescription = styled.h2`
