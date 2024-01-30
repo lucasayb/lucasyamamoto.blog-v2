@@ -14,4 +14,5 @@ export const Category = styled.section`
   padding: 0 15px;
   font-weight: 100;
   text-decoration: none;
+  text-transform: lowercase;
 `
