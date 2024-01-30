@@ -5,6 +5,7 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65b879c83625b4001a8bcd96&product=inline-share-buttons&source=platform" async="async"></script>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -13,7 +14,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet" />
       </head>
       <body {...props.bodyAttributes} className="dark" >

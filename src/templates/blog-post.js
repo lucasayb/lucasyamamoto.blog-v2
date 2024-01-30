@@ -22,7 +22,7 @@ const BlogPost = ({ data, pageContext }) => {
       <S.PostWrapper>
         <S.PostTitle>{frontmatter.title}</S.PostTitle>
         <S.PostSocial9Wrapper>
-          <div className="s9-widget-wrapper" />
+          <div className="sharethis-inline-share-buttons"></div>
         </S.PostSocial9Wrapper>
         <S.PostHeader>
           <S.PostDate>{frontmatter.date}</S.PostDate>
